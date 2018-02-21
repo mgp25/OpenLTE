@@ -1,4 +1,4 @@
-# Open<img src="https://raw.githubusercontent.com/mgp25/OpenLTE/master/assets/lte.png" width=90>
+# Open<img src="https://raw.githubusercontent.com/mgp25/OpenLTE/master/assets/lte.png" width=50>
 
 OpenLTE is an open source implementation of the 3GPP LTE specifications. 
 
@@ -170,7 +170,10 @@ Do not close this windows during operation!
 Output:
 
 ```
-linux; GNU C++ version 4.8.2; Boost_105400; UHD_003.008.001-42-g8c87a524*** LTE FDD ENB ***Please connect to control port 30000
+linux; GNU C++ version 4.8.2; Boost_105400; UHD_003.008.001-42-
+g8c87a524
+*** LTE FDD ENB ***
+Please connect to control port 30000
 ```
 
 **Second terminal:**
@@ -182,7 +185,11 @@ This is the control interface of the eNodeB.
 Output:
 
 ```
-Trying 127.0.0.1...Connected to 127.0.0.1.Escape character is '^]'.*** LTE FDD ENB ***Type help to see a list of commands
+Trying 127.0.0.1...
+Connected to 127.0.0.1.
+Escape character is '^]'.
+*** LTE FDD ENB ***
+Type help to see a list of commands
 ```
 
 **Third terminal (Optional):**
@@ -196,7 +203,14 @@ This command will provide debug log messages.
 **Tx configuration:**
 
 ```
-write band 20write bandwidth 5write dl_earfcn 6300write mcc 214write mnc 12write n_ant 1write rx_gain 30write tx_gain 86
+write band 20
+write bandwidth 5
+write dl_earfcn 6300
+write mcc 214
+write mnc 12
+write n_ant 1
+write rx_gain 30
+write tx_gain 86
 ```
 
 ## Wireshark configuration
