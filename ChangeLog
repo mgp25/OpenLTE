@@ -1,0 +1,273 @@
+Version       Contents
+v00.01.00     First Octave release containing PSS, SSS, CRS, and PBCH
+              transmission and reception for FDD
+v00.02.00     Octave release with fixes in the license statement and a
+              bug fix in lte_fdd_dl_receive.m
+v00.03.00     Octave release with support for PDSCH transmission and
+              reception for SIB1 encoding/decoding.  This includes
+              turbo encoding/decoding.
+v00.04.00     First release with C++ gnuradio support.  Contains PSS
+              SSS, CRS, and PBCH reception for FDD in C++ for gnuradio.
+v00.05.00     C++ changes: Fixed bug in frequency offset removal,
+              added PDSCH reception for SIB1 decoding (including turbo
+              decoding).
+              Octave changes: Fixed bug in 3 antenna spacial multiplexing
+              (lte_layer_mapper).  Fixed bug in 16QAM
+              (lte_modulation_mapper).  Fixed parameter conversions in
+              SIB1 unpacking.
+v00.05.01     Fixed two bugs in liblte_phy.cc.  One relating to symb_starts
+              going negative in find_pss_and_fine_timing.  One relating to
+              using sss_re_5 instead of sss_im_5 in find_sss.
+v00.05.02     Fixed another bug in liblte_phy.cc relating to frame_start_idx
+              going negative in find_sss.
+v00.05.03     Added more DL transmit functionality, rearranged liblte_phy to
+              match the specs, and fixed several bugs: 1) frame_start_idx
+              going negative in find_sss, 2) PDCCH sizes were too small,
+              3) PDCCH reg calculation was wrong, 4) rate match/unmatch bit
+              packing, 5) I/Q swap in LTE_fdd_dl_file_scan.
+v00.05.04     Fixed bugs in liblte_phy.cc in turbo_decode, rate_unmatch_turbo,
+              pdsch_channel_encode, and pdcch_channel_encode.  Added number of
+              bits used to SIB1 pack in liblte_rrc.cc.
+v00.06.00     Enabled fftw input, output, and plan from phy_struct in liblte_phy.
+              Added BER tolerance to CFI decoding.  Added a new gnuradio app
+              for generating an I/Q file with PSS, SSS, CRS, PBCH, PDCCH, and
+              PDSCH.
+v00.06.01     Added RRC support for packing/unpacking SIB2, SIB3, SIB4, and SIB8.
+              Added states and state memory to the file scan sample buffer.
+              Updated the file scan and file generator to use the latest library.
+v00.06.02     Added soft bit turbo decoding, random access and paging PDCCH decoding,
+              and more RRC support.
+v00.06.03     Added SIB2 support and interactive configuration to file_gen app.
+              Added multiple eNB decode support to libraries and file_scan app.
+v00.06.04     Optimized the psuedo random sequence generator, added pre-configuring
+              of the cell specific reference signals, and fixed 4 antenna reception.
+v00.06.05     Added SIB3, SIB4, and SIB8 support to the file_gen app, fixed a bug
+              in the PHICH mapping, fixed the file size bug with the file_gen app,
+              and pulled in a patch for 64 bit support.
+v00.07.00     Moved from automake to cmake.
+v00.07.01     Added -fPIC to compile flags and updated README.
+v00.08.00     Added a scanner application with support for rtl-sdr hardware.
+              Changed the lte library to support multiple sampling rates, integer
+              frequency offset detection, more RRC message/IE packing/unpacking,
+              interface and network name resolution routines.  Added a tools
+              library with support for socket wrapping.  Added test loading
+              to the file scan and generator apps.  Fixed bugs in the file scan
+              application.
+v00.08.01     Converted fftw from double to single precision.  Added paging
+              message printing.  Fixed bugs in lte_fdd_dl_receive.m.
+v00.08.02     Fixed two indexing bugs in liblte_phy.cc.
+v00.08.03     Added MAC functionality to the LTE library, fixed bugs in RRC portion
+              of the LTE library, and added hackrf and SIB decode and print support
+              to the scanner app.
+v00.09.00     Updated to support GnuRadio 3.7, added PRACH support to liblte_phy,
+              cleaned up PRACH support in octave, moved to using socket select with
+              a timeout in libtools, added a new hardware discovery mechanism in
+              LTE_fdd_dl_scan, and added a file recording application.
+v00.09.01     Implemented liblte_phy routines for determining TBS, MCS, N_prb, and
+              N_cce, fixed a bug in the RIV calculation of dci_1a_unpack, added error
+              checking on sizes passed to memcpy in liblte_rrc, added support for
+              changing the sample rate in the LTE_fdd_dl_file_gen app, and added
+              finding FFTW to cmake.
+v00.09.02     Added support for setting the sample rate and output data type in the
+              LTE_fdd_dl_file_gen app and the sample rate and input data type in the
+              LTE_fdd_dl_file_scan app to make the LTE_fdd_dl_file_gen,
+              LTE_fdd_dl_file_scan, and LTE_file_recorder applications compatible,
+              added uplink demodulation reference signal generation to the octave
+              code.
+v00.10.00     Added LTE_fdd_enodeb application using a USRP B2X0 currently with
+              DL transmit only, added support for USRP B2X0 in LTE_fdd_dl_scan
+              and LTE_file_recorder, and fixed a bug genererating the references
+              for the second slot in lte_generate_dmrs_pusch.m.
+v00.10.01     Fixed a bug with the receive size used in LTE_fdd_enb_msgq.cc.
+v00.10.02     Added support for bladeRF in LTE_fdd_dl_scan and LTE_file_recorder,
+              removed cmake requirements for rtl-sdr and hackrf.
+v00.10.03     Fixed a PDSCH mapping bug in the lte_fdd_dl_transmit octave
+              routine.
+v00.10.04     Fixed a bug in LTE_fdd_enodeb dealing with saturation of baseband
+              transmit samples.
+v00.11.00     Fixed a bug with transmitting SIB2 for 1.4MHz bandwidth in
+              LTE_fdd_dl_file_gen and LTE_fdd_enodeb, fixed several bugs in
+              liblte_phy.cc, LTE_fdd_enodeb, and lte_prach_detector.m, and
+              added PRACH detection processing in LTE_fdd_enodeb.
+v00.12.00     Added DL-SCH/UL-SCH MAC PDU processing, added PUSCH mod/demod
+              support, added more RRC support, and added PUSCH mod/demod support
+              in octave.
+v00.12.01     Pulled in patches from Astrasel to initialize the frequency offset
+              estimate array in liblte_phy_dl_find_coarse_timing_and_freq_offset,
+              from Jevgenij for supporting non-B2X0 USRPs in LTE_fdd_dl_scan, from
+              Max Suraev for more descriptive start failures in LTE_fdd_enodeb, and
+              from Andrew Murphy to add DCI 1C unpacking to the LTE library, also
+              added support for PRB allocation differences in each slot and fixed
+              a bug in lte_fdd_dl_transmit relating to PDCCH REG mapping.
+v00.13.00     Added MAC control element handling, PHICH support, TPC support, and
+              RRC DL CCCH message support to the LTE library, added PCAP support,
+              UL and DL CCCH MAC support, communication up to RRC, UL CCCH RRC
+              support, radio bearer, timer, and timer manager support to the eNodeB.
+v00.14.00     Split LIBLTE_MSG_STRUCT into bit and byte messages, fixed a bug when
+              adding more than 1 CCE to PDCCH, added MME, RLC, MAC padding LCID,
+              TPC for DCI 0, RRC UL DCCH message processing, and DCI 0 pack support
+              to the LTE library, added PCAP support to LTE_fdd_dl_scan, added HSS,
+              QoS, uplink scheduling, RRC and MME NAS message handling, and RLC AM
+              processing support, omitting the path from __FILE__, and deleteing
+              users on C-RNTI expiration in LTE_fdd_enodeb.
+v00.14.01     Pulled in patches from Mike Peters to fix an uninitialized N_bits
+              value in liblte, Tim O'Shea to properly reference UHD libraries and
+              include directories for cmake, Jeff Long to fix a mutex double
+              unlock bug, Jeff Long to optimally set the master clock rate for
+              USRP B2X0 in the LTE_fdd_dl_scan application, and added clock source
+              as a configurable parameter in the LTE_fdd_enodeb application.
+v00.15.00     Added make requirement for polarSSL, common, pdcp, and security
+              portions of liblte, more decoding/encoding to liblte_mme and
+              liblte_rrc, NACK support to liblte_rlc, and many changes to
+              LTE_fdd_enodeb (limit PCAP output, authentication vector support,
+              HSS interface support, message parsers/senders and state machines
+              for MME, RRC command messages, transmit functionality for PDCP,
+              RLC, and RRC, and refactoring of user identities).
+v00.16.00     Added more MME decoding and encoding and security functions for
+              key generation and EIA2 to the LTE library.  Added authentication,
+              security mode, and sequence number resynch support to MME/HSS,
+              added read only parameters for UL EARFCN, DL center frequency, and
+              UL center frequency, fixed bugs with stop and t_poll_retransmit,
+              and combined the contention resolution identity and first DL RLC
+              message in LTE_fdd_enodeb.
+v00.17.00     Added more MME and RRC decoding and encoding and integrity protection
+              of PDCP control messages in the LTE library.  Added configuration
+              and user file support, PDCP security, RRC security mode command,
+              SRB2 setup, RRC connection reconfiguration, MME EMM attach, MME
+              ESM default bearer setup, and M-TMSI assignment to LTE_fdd_enodeb.
+v00.17.01     Added SIB13 packing and printing for LTE_fdd_dl_file_scan and
+              pulled in a patch from Andrew Murphy to add SIB13 unpacking and
+              printing for LTE_fdd_dl_scan.
+v00.18.00     Added IP packet support to LTE_fdd_enodeb.  Specifically, added the
+              liblte prefix to value_2_bits and bits_2_value, converted everything
+              except PHY and RRC to byte message struct, added more MME decoding
+              and encoding, added PDCP user plane support, added RLC UMD support,
+              and fixed a bug in RRC connection reesablishment pack and unpack
+              (thanks to Paul Sutton for tracking this down) in the LTE library.
+              Added regeneration of eNodeB security data in HSS, service request,
+              service reject, and activate dedicated EPS bearer context request
+              support in MME, timer reset, and IP gateway support, using the
+              latest LTE library, and refactored C-RNTI assignement and release
+              in LTE_fdd_enodeb.
+v00.18.01     Added more MME encoding and decoding to the LTE library, pulled in
+              a patch from Ruben Merz to add USRP X300 support for LTE_fdd_dl_scan
+              and LTE_fdd_enodeb, added to enodeb_nat_script.sh, added delayed
+              user deletion, ol extension to all message queues, ability to send
+              EMM information message, and QoS for default data services to
+              LTE_fdd_enodeb.
+v00.18.02     Fixed several bugs in LTE_fdd_enodeb.  Specifically, cleaned up the
+              Time Zone and Time IE and added C-RNTI support to
+              get_tbs_mcs_and_N_prb_for_dl in liblte, added asymmetric QoS support,
+              dynamically determining MCS for downlink data, sending EMM information
+              message, added more time spec information in radio debug, copying
+              SRB1 PDCP config to SRB2, fixed a UMD reassembly bug, and did a hack
+              to get around a crash when releasing a C-RNTI in LTE_fdd_enodeb.
+v00.18.03     Added more MME encoding and decoding, RLC UMD header extension
+              support, and higher order modulation scheme support to PHY in the LTE
+              library, split the error enum into common.h, moved to a new message
+              queue using semaphores and circular buffers, added IP PCAP support,
+              split UL/DL QoS TTI frequency, added user reset to RB class, added
+              RLC UMD multiple data support, added UTC timestamps to the debug
+              log port, added higher order modulation scheme support in MAC, fixed
+              C-RNTI assign/release management, changed RTS timing, fixed user
+              switch in MME/RRC, added clear RB support and fixed copy RB in the
+              user class for LTE_fdd_enodeb.
+v00.18.04     Fixed long BSR CE and added extended power headroom CE support, added
+              PDCP data PDU with short SN support, and added header extension
+              handling to RLC AMD to LTE library, added UmTRX support to
+              LTE_fdd_dl_scan, fixed the start/stop/start issues by closing the TUN
+              device on stop, fixed the RTS issues, added a mutex to the message
+              queue circular buffer, fixed uninitialized variables in the configuration
+              database, added header extension/multiple data support for RLC AMD,
+              added detach handling, and added a common routine for formatting time to
+              LTE_fdd_enodeb.
+v00.19.00     Removed rb_id from all MME pack routines (thanks to Przemek for finding
+              this), fixed a bug with the default value of filter_coeff in
+              LIBLTE_RRC_UL_POWER_CONTROL_DEDICATED_STRUCT (thanks to Paul Sutton for
+              finding this), added the length indicator for eps_mobile_id (thanks to
+              Paul Sutton for finding this), added an error return for dci_1a_unpack
+              (thanks to Joel Carlson for the suggestion), properly initializing
+              vd_w_metric (thanks for ziminghe for finding this), and limiting PUSCH
+              allocations to 10 PRBs for performance reasons in the LTE library, added
+              TX and RX gains to the config file, combined UL and DL schedule messages
+              into a single PHY schedule message, moved QoS structure from RB class
+              to the user class, fixed bugs related to the RLC AM TX and RX buffers,
+              changed the default timer alignment timer to 10240 subframes, removed
+              boost::lexical_casts from HSS, moved the dedicated bearer QoS to 9, and
+              moved DRBs to RLC AMD mode in LTE_fdd_enodeb.
+v00.19.01     Added support for all ID types for the mobile identity IE in MME, added
+              support for more PDU types in PDCP, added defines for sizes of fixed
+              arrays in LIBLTE_PHY_STRUCT, fixed the order of sizes for rate match
+              and unmatch arrays in LIBLTE_PHY_STRUCT (thanks to Ziming He), added
+              return values for liblte_phy_get_n_cce (thanks to Damian Jarek) and
+              liblte_rlc_unpack_status_pdu (thanks to Mikhail Gudkov) in the LTE
+              library, added a scoped lock RAII class for sem_t and pthread_mutex_t
+              in the tools library, changed from using boost::mutex to pthread_mutex_t
+              and_sem_t throughout, added helper functions in MAC, changed user
+              deletion and C-RNTI release procedures, properly initializing SIB
+              scheduling info, properly construct MNC (thanks to Mikhail Gudkov),
+              fixed an issue with RTS response in MAC, properly initialized PHY
+              allocation structure in MAC (thanks to Markus Grab), fixed the updating
+              of VT(A) in the RLC retransmission buffer, and changed the QoS parameters
+              for default data in LTE_fdd_enodeb.
+v00.19.02     Pulled in unit tests for the turbo decoder from Ziming He, optimized
+              the PBCH detection algorithm (thanks to Ziming He), and fixed the setting
+              of id for IMEISV in Mobile Idenity IE (thanks to Mikhail Gudkov) in the
+              LTE library, added the ability to print all registered users, removed
+              extra boost includes, added an RRC connection reestablishment state
+              machine, added a UE inactivity timer, actually properly constructing
+              MNC (thanks to Mikhail Gudkov), memcpy-ing IP packet headers instead
+              of typecasting (thanks to Damian Jarek), initialized present flags
+              and changed packet filter evaluation precedence in activate dedicated
+              EPS bearer context (thanks to Pedro Batista), moved the message queue
+              empty error to a warning, and properly updating the user list iterator
+              after erasing a user (thanks to Damian Jarek).
+v00.19.03     Added support for PUCCH decode in liblte, added support for H-ARQ and
+              PUCCH in LTE_fdd_enodeb, and fixed a bug related to improper cleanup
+              of the inactivity timer in LTE_fdd_enodeb
+v00.19.04     Fixed the calculation of n_prime_p in generate_dmrs_pucch.
+v00.20.00     Increased the maximum messages size, fixed extended power headroom MAC
+              CE, added classmark3 support, added tracking area update request support,
+              fixed the fill bits in packing mobile ID IE for IMEISV and the length in
+              unpacking UE security capabilities IE (thanks to Przemek Bereski for
+              finding this), allowing NULL to be passed for key_256 in service reject
+              message packing (thanks to Przemek Bereski and Peter Nguyen for finding
+              this), added PDCCH size defines, added an error return to DCI 1C unpack,
+              clearing punctered turbo decode bits before decoding, added AMD PDU
+              segment support, padded all RRC enums to powers of 2, added support for
+              several RRC IEs and messages (with the help of Przemek Bereski) in the
+              LTE library, restructured the radio classes to ease the addition of new
+              radio types, set the processor affinity to allow the PHY/Radio to run
+              on a particular core, fixed memcpy lengths in MAC, fixed bugs in
+              print_all_users (thanks to Sultan Qasim Khan for finding this) and when
+              receiving a service request message for a non-existent user (thanks to
+              Peter Nguyen for finding this), fixed a long standing PHY bug that was
+              including UL PDCCH allocations in a check of DL PRB usage, added error
+              logging for received AMD PDU segments, increased the DL datarate for
+              default data QoS, using C-RNTI when no IMSI/IMEI are available for
+              printing an attached user, Przemek Bereski added UE capability enquiry
+              and UE capability information support and bladeRF support.
+v00.20.01     Reworked the MAC RTS handling logic and limited the number of HARQ
+              retransmissions in LTE_fdd_enodeb.
+v00.20.02     Changed the QoS DL bytes per subframe for default data to ensure QPSK
+              only for 5MHz other DL modulation schemes seem to not be functioning
+              correctly.
+v00.20.03     Properly discarding sequence type extensions in liblte_rrc, properly
+              typecasting for bladerf_get_timestamp() in LTE_fdd_enodeb_radio, and
+              updated enodeb_nat_script.sh to be more generic with ethernet
+              interfaces.
+v00.20.04     Added band 26, 27, and 28 support (thanks to Jeremy Quirke), fixed the
+              length skipping in liblte_mme_unpack_pdn_address_ie (thanks to Przemek
+              Bereski), and fixed the turbo encoder tail bits (thanks to Laurent
+              Louf and Jeremy Quirke) in the LTE library and fixed the handling of
+              multiple RLC AMD PDUs throughout.
+v00.20.05     Added two codeword support, refactored PUCCH channel decoding for 1,
+              1A, and 1B, added SR configuration index mapping, added liblte_common
+              unit tests, and properly handling FI fields for multiple AMD PDUs in
+              the LTE library, added helper functions and interprocess message queue
+              support to the tools library, added SR support, moved GW, MME, and PDCP
+              away from the singleton pattern, added direct IPC to a UE for MAC and
+              PHY, removed QOS and fixed UL scheduling in favor of SR and BSR based
+              UL scheduling, and refactored the AMD reception buffer to handle more
+              than one PDU per SN in LTE_fdd_enodeb, and fixed a typo in
+              lte_pucch_demod.m.
