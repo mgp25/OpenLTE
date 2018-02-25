@@ -440,6 +440,8 @@ You can delete the previously added subscriber with:
 
 **Note that the first 3 digits of IMSI is the MCC** (or Mobile Country Code) **and the two digits after the MCC is the MNC** (or Mobile Network Code). In the above example the MCC is 901 and the MNC is 55. It is not necessary but helps the Mobile Station a lot to set the MCC/MNC of your LTE network as your programmed SIM cards dictates. You can change the IMSI value during the SIM card programming stage also to match the specification of a test network: `MCC=001` and `MNC=01`.
 
+Please, note that you will need to setup an APN on your device in order to successfully have data connectivity. We will add indications on how to achieve this as far as our work progresses.
+
 **You should NEVER use the MCC/MNC configuration of a commercial provider!**
 
 
