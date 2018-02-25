@@ -359,6 +359,14 @@ Sometimes it is necessary to give the program the number of the card programmer:
 
 Now we are ready to program the USIM finally! :-)
 
+### Sysmo USIM Tool
+
+Get Sysmo USIM tool:
+
+`git clone git://git.sysmocom.de/sysmo-usim-tool`
+
+We will need: `sysmo-usim-tool.sjs1.py`
+
 ### Programming the SIM card
 
 **Important:**
@@ -373,24 +381,29 @@ To change branch to `zecke/tmp2`, use this command:
 Example to program a SysmoUSIM-SJS1 card:
 
 ```
-./pySim-prog.py -p 0 -x 101 -y 02 -t sysmoUSIM-SJS1 -i 101020000000003 -s 8988211000000012345 --op=11111111111111111111111111111111 -k 8BAF473F2F8FD09487CCCBD7097C6862 -a 53770832
-Insert card now (or CTRL-C to cancel)
-Generated card parameters :
- > Name    : Magic
- > SMSP    : e1ffffffffffffffffffffffff0581005155f5ffffffffffff000000
- > ICCID   : 8988211000000012345
- > MCC/MNC : 101/2
- > IMSI    : 101020000000003
- > Ki      : 8BAF473F2F8FD09487CCCBD7097C6862
- > OPC     : 8e27b6af0e692e750f32667a3b14605d
- > ACC     : None
-
-Programming ...
-Done !
+./pySim-prog.py -p 0 --mcc 101 --mnc 02 -t sysmoUSIM-SJS1 --imsi 101020000000003 --iccid 8988211000000012345 --ki 8BAF473F2F8FD09487CCCBD7097C6862 --pin-adm 53770832
 ```
 
-Where `-a` is the part where you need to give the `ADM1` for this specific SIM card. Again, if you are not using the `zecke/tmp2` branch or not giving the proper `ADM1` pin when you try to program the Sysmo-USIm S1J1 SIMs, you will likely end up with a permamnently damaged card!
+**IMPORTANT:** Where `-a` is the part where you need to give the `ADM1` for this specific SIM card. Again, if you are not using the `zecke/tmp2` branch or not giving the proper `ADM1` pin when you try to program the Sysmo-USIm S1J1 SIMs, you will likely end up with a permamnently damaged card!
 
+Now lets set MILENAGE algorithm and the OP.
+
+`./sysmo-usim-tool.sjs1.py --adm1 ADM1_KEY --set-op LTE_DEFAULT_OP_CODE -T MILENAGE:MILENAGE`
+
+OpenLTE has a default OP code, which is:
+
+`OP=63bfa50ee6523365ff14c1f45f88737d`
+
+In case you want to change this value with your own, you need to edit `liblte/src/liblte_security.cc` and edit the OP value (this will require to compile OpenLTE again to make this change effective):
+
+```c
+static const uint8 OP[16] = {0x63,0xBF,0xA5,0x0E,0xE6,0x52,0x33,0x65,
+0xFF,0x14,0xC1,0xF4,0x5F,0x88,0x73,0x7D};
+```
+
+**Reference:** [Specification of the MILENAGE algorithm - 3GPP TS 35.206](http://www.etsi.org/deliver/etsi_ts/135200_135299/135206/14.00.00_60/ts_135206v140000p.pdf)
+
+**Reference:** [Sysmo USIM Manual](https://www.sysmocom.de/manuals/sysmousim-manual.pdf)
 
 ### Adding subscribers
 
