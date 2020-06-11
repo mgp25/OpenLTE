@@ -1,0 +1,19 @@
+Start testing: May 19 07:42 CST
+----------------------------------------------------------
+1/1 Testing: liblte_common_test
+1/1 Test: liblte_common_test
+Command: "/home/onkar/Documents/lib/openlte/build/liblte/liblte_common_test"
+Directory: /home/onkar/Documents/lib/openlte/build/liblte
+"liblte_common_test" start time: May 19 07:42 CST
+Output:
+----------------------------------------------------------
+Tests passed!
+<end of output>
+Test time =   0.00 sec
+----------------------------------------------------------
+Test Passed.
+"liblte_common_test" end time: May 19 07:42 CST
+"liblte_common_test" time elapsed: 00:00:00
+----------------------------------------------------------
+
+End testing: May 19 07:42 CST

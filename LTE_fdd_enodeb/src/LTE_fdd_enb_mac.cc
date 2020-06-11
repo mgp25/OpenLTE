@@ -389,7 +389,8 @@ void LTE_fdd_enb_mac::handle_ready_to_send(LTE_FDD_ENB_READY_TO_SEND_MSG_STRUCT 
                         sizeof(LTE_FDD_ENB_TIMER_TICK_MSG_STRUCT));
 
     phy->get_current_ttis(&dl_tti, &ul_tti);
-    if(2 != ((int32)(sched_dl_subfr[sched_cur_dl_subfn].current_tti) - (int32)(dl_tti)))
+    //if(2 != ((int32)(sched_dl_subfr[sched_cur_dl_subfn].current_tti) - (int32)(dl_tti)))
+    if((2 != ((int32)(sched_dl_subfr[sched_cur_dl_subfn].current_tti) - (int32)(dl_tti)))&&(-10238 != ((int32)(sched_dl_subfr[sched_cur_dl_subfn].current_tti) - (int32)(dl_tti))))
     {
         num_subfrs_to_skip = (int32)(sched_dl_subfr[sched_cur_dl_subfn].current_tti) - (int32)(dl_tti);
         if(1000 < fabs(num_subfrs_to_skip))

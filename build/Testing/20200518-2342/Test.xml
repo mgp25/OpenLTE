@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Site BuildName="(empty)"
+	BuildStamp="20200518-2342-Experimental"
+	Name="(empty)"
+	Generator="ctest-3.10.2"
+	CompilerName=""
+	CompilerVersion=""
+	OSName="Linux"
+	Hostname="ubuntu-WS-E500-G5-WS690T"
+	OSRelease="5.3.0-28-generic"
+	OSVersion="#30~18.04.1-Ubuntu SMP Fri Jan 17 06:14:09 UTC 2020"
+	OSPlatform="x86_64"
+	Is64Bits="1"
+	VendorString="GenuineIntel"
+	VendorID="Intel Corporation"
+	FamilyID="6"
+	ModelID="158"
+	ProcessorCacheSize="9216"
+	NumberOfLogicalCPU="6"
+	NumberOfPhysicalCPU="6"
+	TotalVirtualMemory="2047"
+	TotalPhysicalMemory="15808"
+	LogicalProcessorsPerPhysical="1"
+	ProcessorClockFrequency="3900.02"
+	>
+	<Testing>
+		<StartDateTime>May 19 07:42 CST</StartDateTime>
+		<StartTestTime>1589845346</StartTestTime>
+		<TestList>
+			<Test>./liblte/liblte_common_test</Test>
+		</TestList>
+		<Test Status="passed">
+			<Name>liblte_common_test</Name>
+			<Path>./liblte</Path>
+			<FullName>./liblte/liblte_common_test</FullName>
+			<FullCommandLine>/home/onkar/Documents/lib/openlte/build/liblte/liblte_common_test</FullCommandLine>
+			<Results>
+				<NamedMeasurement type="numeric/double" name="Execution Time">
+					<Value>0.000972986</Value>
+				</NamedMeasurement>
+				<NamedMeasurement type="numeric/double" name="Processors">
+					<Value>1</Value>
+				</NamedMeasurement>
+				<NamedMeasurement type="text/string" name="Completion Status">
+					<Value>Completed</Value>
+				</NamedMeasurement>
+				<NamedMeasurement type="text/string" name="Command Line">
+					<Value>/home/onkar/Documents/lib/openlte/build/liblte/liblte_common_test</Value>
+				</NamedMeasurement>
+				<Measurement>
+					<Value>Tests passed!
+</Value>
+				</Measurement>
+			</Results>
+		</Test>
+		<EndDateTime>May 19 07:42 CST</EndDateTime>
+		<EndTestTime>1589845346</EndTestTime>
+		<ElapsedMinutes>0</ElapsedMinutes>
+	</Testing>
+</Site>
