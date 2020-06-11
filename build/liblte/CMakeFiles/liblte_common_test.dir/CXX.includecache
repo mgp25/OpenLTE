@@ -1,0 +1,28 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+../cmn_hdr/typedefs.h
+stdlib.h
+-
+stdio.h
+-
+
+../liblte/hdr/liblte_common.h
+typedefs.h
+../liblte/hdr/typedefs.h
+string.h
+-
+
+/home/onkar/Documents/lib/openlte/liblte/src/liblte_common.cc
+liblte_common.h
+/home/onkar/Documents/lib/openlte/liblte/src/liblte_common.h
+
+/home/onkar/Documents/lib/openlte/liblte/tests/liblte_common_tests.cc
+liblte_common.h
+/home/onkar/Documents/lib/openlte/liblte/tests/liblte_common.h
+

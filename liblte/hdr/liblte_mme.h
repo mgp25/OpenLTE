@@ -2998,6 +2998,12 @@ typedef struct{
     LIBLTE_MME_EPS_MOBILE_ID_STRUCT  eps_mobile_id;
 }LIBLTE_MME_DETACH_REQUEST_MSG_STRUCT;
 // Functions
+LIBLTE_ERROR_ENUM liblte_mme_pack_network_detach_request_msg(LIBLTE_MME_DETACH_REQUEST_MSG_STRUCT *detach_req,
+                                                     uint8                                 sec_hdr_type,
+                                                     uint8                                *key_256,
+                                                     uint32                                count,
+                                                     uint8                                 direction,
+                                                     LIBLTE_BYTE_MSG_STRUCT               *msg);
 LIBLTE_ERROR_ENUM liblte_mme_pack_detach_request_msg(LIBLTE_MME_DETACH_REQUEST_MSG_STRUCT *detach_req,
                                                      uint8                                 sec_hdr_type,
                                                      uint8                                *key_256,

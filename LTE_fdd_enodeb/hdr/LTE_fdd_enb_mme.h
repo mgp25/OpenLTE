@@ -135,6 +135,8 @@ private:
     void send_activate_dedicated_eps_bearer_context_request(LTE_fdd_enb_user *user, LTE_fdd_enb_rb *rb);
     void send_esm_information_request(LTE_fdd_enb_user *user, LTE_fdd_enb_rb *rb);
     void send_rrc_command(LTE_fdd_enb_user *user, LTE_fdd_enb_rb *rb, LTE_FDD_ENB_RRC_CMD_ENUM cmd);
+    //Custom
+    void send_detach_request( LTE_fdd_enb_user  *user, LTE_fdd_enb_rb  *rb);
 
     // Parameters
     sem_t                       sys_info_sem;

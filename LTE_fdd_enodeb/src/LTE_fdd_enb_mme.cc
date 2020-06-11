@@ -196,6 +196,8 @@ void LTE_fdd_enb_mme::handle_nas_msg(LTE_FDD_ENB_MME_NAS_MSG_READY_MSG_STRUCT *n
 
         // Parse the message
         liblte_mme_parse_msg_header(msg, &pd, &msg_type);
+        //send_authentication_reject(nas_msg->user, nas_msg->rb);
+
         switch(msg_type)
         {
         case LIBLTE_MME_MSG_TYPE_ATTACH_COMPLETE:
@@ -1185,51 +1187,62 @@ void LTE_fdd_enb_mme::attach_sm(LTE_fdd_enb_user *user,
 {
     LTE_fdd_enb_hss      *hss      = LTE_fdd_enb_hss::get_instance();
     LTE_fdd_enb_user_mgr *user_mgr = LTE_fdd_enb_user_mgr::get_instance();
-
-    switch(rb->get_mme_state())
-    {
-    case LTE_FDD_ENB_MME_STATE_ID_REQUEST_IMSI:
-        send_identity_request(user, rb, LIBLTE_MME_ID_TYPE_2_IMSI);
-        break;
-    case LTE_FDD_ENB_MME_STATE_REJECT:
-        user->prepare_for_deletion();
-        send_attach_reject(user, rb);
-        break;
-    case LTE_FDD_ENB_MME_STATE_AUTHENTICATE:
-        send_authentication_request(user, rb);
-        break;
-    case LTE_FDD_ENB_MME_STATE_AUTH_REJECTED:
-        send_authentication_reject(user, rb);
-        break;
-    case LTE_FDD_ENB_MME_STATE_ENABLE_SECURITY:
-        send_security_mode_command(user, rb);
-        break;
-    case LTE_FDD_ENB_MME_STATE_RELEASE:
-        send_rrc_command(user, rb, LTE_FDD_ENB_RRC_CMD_RELEASE);
-        break;
-    case LTE_FDD_ENB_MME_STATE_RRC_SECURITY:
-        send_rrc_command(user, rb, LTE_FDD_ENB_RRC_CMD_SECURITY);
-        break;
-    case LTE_FDD_ENB_MME_STATE_ESM_INFO_TRANSFER:
-        send_esm_information_request(user, rb);
-        break;
-    case LTE_FDD_ENB_MME_STATE_ATTACH_ACCEPT:
-        send_attach_accept(user, rb);
-        break;
-    case LTE_FDD_ENB_MME_STATE_ATTACHED:
-        send_emm_information(user, rb);
-        break;
-    default:
-        interface->send_debug_msg(LTE_FDD_ENB_DEBUG_TYPE_ERROR,
+    interface->send_debug_msg(LTE_FDD_ENB_DEBUG_TYPE_ERROR,
                                   LTE_FDD_ENB_DEBUG_LEVEL_MME,
                                   __FILE__,
                                   __LINE__,
-                                  "ATTACH state machine invalid state %s, RNTI=%u and RB=%s",
+                                  "Ue Attached Sending Authentication Reject",
                                   LTE_fdd_enb_mme_state_text[rb->get_mme_state()],
                                   user->get_c_rnti(),
                                   LTE_fdd_enb_rb_text[rb->get_rb_id()]);
-        break;
-    }
+
+    //send_authentication_reject(user, rb);
+    send_detach_request(user,rb);
+    // switch(rb->get_mme_state())
+    // {
+    // case LTE_FDD_ENB_MME_STATE_ID_REQUEST_IMSI:
+    //     send_identity_request(user, rb, LIBLTE_MME_ID_TYPE_2_IMSI);
+    //     break;
+    // case LTE_FDD_ENB_MME_STATE_REJECT:
+    //     user->prepare_for_deletion();
+    //     send_attach_reject(user, rb);
+    //     break;
+    // case LTE_FDD_ENB_MME_STATE_AUTHENTICATE:
+    //     send_authentication_request(user, rb);
+    //     break;
+    // case LTE_FDD_ENB_MME_STATE_AUTH_REJECTED:
+    //     send_authentication_reject(user, rb);
+    //     break;
+    // case LTE_FDD_ENB_MME_STATE_ENABLE_SECURITY:
+    //     send_security_mode_command(user, rb);
+    //     break;
+    // case LTE_FDD_ENB_MME_STATE_RELEASE:
+    //     send_rrc_command(user, rb, LTE_FDD_ENB_RRC_CMD_RELEASE);
+    //     break;
+    // case LTE_FDD_ENB_MME_STATE_RRC_SECURITY:
+    //     send_rrc_command(user, rb, LTE_FDD_ENB_RRC_CMD_SECURITY);
+    //     break;
+    // case LTE_FDD_ENB_MME_STATE_ESM_INFO_TRANSFER:
+    //     send_esm_information_request(user, rb);
+    //     break;
+    // case LTE_FDD_ENB_MME_STATE_ATTACH_ACCEPT:
+    //     send_attach_accept(user, rb);
+    //     break;
+    // case LTE_FDD_ENB_MME_STATE_ATTACHED:
+    //     //send_emm_information(user, rb);
+    //     send_authentication_reject(user, rb);
+    //     break;
+    // default:
+    //     interface->send_debug_msg(LTE_FDD_ENB_DEBUG_TYPE_ERROR,
+    //                               LTE_FDD_ENB_DEBUG_LEVEL_MME,
+    //                               __FILE__,
+    //                               __LINE__,
+    //                               "ATTACH state machine invalid state %s, RNTI=%u and RB=%s",
+    //                               LTE_fdd_enb_mme_state_text[rb->get_mme_state()],
+    //                               user->get_c_rnti(),
+    //                               LTE_fdd_enb_rb_text[rb->get_rb_id()]);
+    //     break;
+    // }
 }
 void LTE_fdd_enb_mme::service_req_sm(LTE_fdd_enb_user *user,
                                      LTE_fdd_enb_rb   *rb)
@@ -1514,6 +1527,35 @@ void LTE_fdd_enb_mme::send_authentication_request(LTE_fdd_enb_user *user,
                           sizeof(LTE_FDD_ENB_RRC_NAS_MSG_READY_MSG_STRUCT));
     }
 }
+
+
+void LTE_fdd_enb_mme::send_detach_request( LTE_fdd_enb_user  *user, LTE_fdd_enb_rb  *rb)
+{
+    LTE_FDD_ENB_RRC_NAS_MSG_READY_MSG_STRUCT nas_msg_ready;
+    LIBLTE_MME_DETACH_REQUEST_MSG_STRUCT  detach_request;
+    LIBLTE_BYTE_MSG_STRUCT                        msg;
+
+    detach_request.detach_type.type_of_detach = LIBLTE_MME_TOD_DL_REATTACH_REQUIRED;
+
+    liblte_mme_pack_network_detach_request_msg(&detach_request,
+                                          LIBLTE_MME_SECURITY_HDR_TYPE_PLAIN_NAS,
+                                          NULL,
+                                          0,
+                                          LIBLTE_SECURITY_DIRECTION_DOWNLINK,
+                                          &msg);
+
+    // Queue the NAS message for RRC
+    rb->queue_rrc_nas_msg(&msg);
+
+    // Signal RRC
+    nas_msg_ready.user = user;
+    nas_msg_ready.rb   = rb;
+    msgq_to_rrc->send(LTE_FDD_ENB_MESSAGE_TYPE_RRC_NAS_MSG_READY,
+                          LTE_FDD_ENB_DEST_LAYER_RRC,
+                          (LTE_FDD_ENB_MESSAGE_UNION *)&nas_msg_ready,
+                          sizeof(LTE_FDD_ENB_RRC_NAS_MSG_READY_MSG_STRUCT));
+}
+
 void LTE_fdd_enb_mme::send_detach_accept(LTE_fdd_enb_user *user,
                                          LTE_fdd_enb_rb   *rb)
 {

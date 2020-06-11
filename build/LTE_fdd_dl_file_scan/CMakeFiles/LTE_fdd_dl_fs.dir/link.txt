@@ -1,0 +1,1 @@
+/usr/bin/c++ -fPIC  -fPIC -g  -shared -Wl,-soname,libLTE_fdd_dl_fs.so -o libLTE_fdd_dl_fs.so CMakeFiles/LTE_fdd_dl_fs.dir/src/LTE_fdd_dl_fs_samp_buf.cc.o ../liblte/liblte.a -lfftw3f -lboost_system -lgnuradio-runtime -lgnuradio-pmt -llog4cpp -lgnuradio-runtime -lgnuradio-pmt -llog4cpp 

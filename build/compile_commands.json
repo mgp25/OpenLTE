@@ -1,0 +1,212 @@
+[
+{
+  "directory": "/home/onkar/Documents/lib/openlte/build/liblte",
+  "command": "/usr/bin/c++   -I/usr/include/osmosdr -I/home/onkar/Documents/lib/openlte/liblte/hdr -I/home/onkar/Documents/lib/openlte/cmn_hdr   -fPIC -g   -fvisibility=hidden -o CMakeFiles/liblte_common_test.dir/tests/liblte_common_tests.cc.o -c /home/onkar/Documents/lib/openlte/liblte/tests/liblte_common_tests.cc",
+  "file": "/home/onkar/Documents/lib/openlte/liblte/tests/liblte_common_tests.cc"
+},
+{
+  "directory": "/home/onkar/Documents/lib/openlte/build/liblte",
+  "command": "/usr/bin/c++   -I/usr/include/osmosdr -I/home/onkar/Documents/lib/openlte/liblte/hdr -I/home/onkar/Documents/lib/openlte/cmn_hdr   -fPIC -g   -fvisibility=hidden -o CMakeFiles/liblte_common_test.dir/src/liblte_common.cc.o -c /home/onkar/Documents/lib/openlte/liblte/src/liblte_common.cc",
+  "file": "/home/onkar/Documents/lib/openlte/liblte/src/liblte_common.cc"
+},
+{
+  "directory": "/home/onkar/Documents/lib/openlte/build/liblte",
+  "command": "/usr/bin/c++   -I/usr/include/osmosdr -I/home/onkar/Documents/lib/openlte/liblte/hdr -I/home/onkar/Documents/lib/openlte/cmn_hdr   -fPIC -g   -fvisibility=hidden -o CMakeFiles/lte.dir/src/liblte_common.cc.o -c /home/onkar/Documents/lib/openlte/liblte/src/liblte_common.cc",
+  "file": "/home/onkar/Documents/lib/openlte/liblte/src/liblte_common.cc"
+},
+{
+  "directory": "/home/onkar/Documents/lib/openlte/build/liblte",
+  "command": "/usr/bin/c++   -I/usr/include/osmosdr -I/home/onkar/Documents/lib/openlte/liblte/hdr -I/home/onkar/Documents/lib/openlte/cmn_hdr   -fPIC -g   -fvisibility=hidden -o CMakeFiles/lte.dir/src/liblte_interface.cc.o -c /home/onkar/Documents/lib/openlte/liblte/src/liblte_interface.cc",
+  "file": "/home/onkar/Documents/lib/openlte/liblte/src/liblte_interface.cc"
+},
+{
+  "directory": "/home/onkar/Documents/lib/openlte/build/liblte",
+  "command": "/usr/bin/c++   -I/usr/include/osmosdr -I/home/onkar/Documents/lib/openlte/liblte/hdr -I/home/onkar/Documents/lib/openlte/cmn_hdr   -fPIC -g   -fvisibility=hidden -o CMakeFiles/lte.dir/src/liblte_phy.cc.o -c /home/onkar/Documents/lib/openlte/liblte/src/liblte_phy.cc",
+  "file": "/home/onkar/Documents/lib/openlte/liblte/src/liblte_phy.cc"
+},
+{
+  "directory": "/home/onkar/Documents/lib/openlte/build/liblte",
+  "command": "/usr/bin/c++   -I/usr/include/osmosdr -I/home/onkar/Documents/lib/openlte/liblte/hdr -I/home/onkar/Documents/lib/openlte/cmn_hdr   -fPIC -g   -fvisibility=hidden -o CMakeFiles/lte.dir/src/liblte_mac.cc.o -c /home/onkar/Documents/lib/openlte/liblte/src/liblte_mac.cc",
+  "file": "/home/onkar/Documents/lib/openlte/liblte/src/liblte_mac.cc"
+},
+{
+  "directory": "/home/onkar/Documents/lib/openlte/build/liblte",
+  "command": "/usr/bin/c++   -I/usr/include/osmosdr -I/home/onkar/Documents/lib/openlte/liblte/hdr -I/home/onkar/Documents/lib/openlte/cmn_hdr   -fPIC -g   -fvisibility=hidden -o CMakeFiles/lte.dir/src/liblte_rlc.cc.o -c /home/onkar/Documents/lib/openlte/liblte/src/liblte_rlc.cc",
+  "file": "/home/onkar/Documents/lib/openlte/liblte/src/liblte_rlc.cc"
+},
+{
+  "directory": "/home/onkar/Documents/lib/openlte/build/liblte",
+  "command": "/usr/bin/c++   -I/usr/include/osmosdr -I/home/onkar/Documents/lib/openlte/liblte/hdr -I/home/onkar/Documents/lib/openlte/cmn_hdr   -fPIC -g   -fvisibility=hidden -o CMakeFiles/lte.dir/src/liblte_pdcp.cc.o -c /home/onkar/Documents/lib/openlte/liblte/src/liblte_pdcp.cc",
+  "file": "/home/onkar/Documents/lib/openlte/liblte/src/liblte_pdcp.cc"
+},
+{
+  "directory": "/home/onkar/Documents/lib/openlte/build/liblte",
+  "command": "/usr/bin/c++   -I/usr/include/osmosdr -I/home/onkar/Documents/lib/openlte/liblte/hdr -I/home/onkar/Documents/lib/openlte/cmn_hdr   -fPIC -g   -fvisibility=hidden -o CMakeFiles/lte.dir/src/liblte_rrc.cc.o -c /home/onkar/Documents/lib/openlte/liblte/src/liblte_rrc.cc",
+  "file": "/home/onkar/Documents/lib/openlte/liblte/src/liblte_rrc.cc"
+},
+{
+  "directory": "/home/onkar/Documents/lib/openlte/build/liblte",
+  "command": "/usr/bin/c++   -I/usr/include/osmosdr -I/home/onkar/Documents/lib/openlte/liblte/hdr -I/home/onkar/Documents/lib/openlte/cmn_hdr   -fPIC -g   -fvisibility=hidden -o CMakeFiles/lte.dir/src/liblte_mme.cc.o -c /home/onkar/Documents/lib/openlte/liblte/src/liblte_mme.cc",
+  "file": "/home/onkar/Documents/lib/openlte/liblte/src/liblte_mme.cc"
+},
+{
+  "directory": "/home/onkar/Documents/lib/openlte/build/liblte",
+  "command": "/usr/bin/c++   -I/usr/include/osmosdr -I/home/onkar/Documents/lib/openlte/liblte/hdr -I/home/onkar/Documents/lib/openlte/cmn_hdr   -fPIC -g   -fvisibility=hidden -o CMakeFiles/lte.dir/src/liblte_security.cc.o -c /home/onkar/Documents/lib/openlte/liblte/src/liblte_security.cc",
+  "file": "/home/onkar/Documents/lib/openlte/liblte/src/liblte_security.cc"
+},
+{
+  "directory": "/home/onkar/Documents/lib/openlte/build/libtools",
+  "command": "/usr/bin/c++   -I/usr/include/osmosdr -I/home/onkar/Documents/lib/openlte/libtools/hdr -I/home/onkar/Documents/lib/openlte/cmn_hdr -I/home/onkar/Documents/lib/openlte/liblte/hdr   -fPIC -g   -fvisibility=hidden -o CMakeFiles/tools.dir/src/libtools_socket_wrap.cc.o -c /home/onkar/Documents/lib/openlte/libtools/src/libtools_socket_wrap.cc",
+  "file": "/home/onkar/Documents/lib/openlte/libtools/src/libtools_socket_wrap.cc"
+},
+{
+  "directory": "/home/onkar/Documents/lib/openlte/build/libtools",
+  "command": "/usr/bin/c++   -I/usr/include/osmosdr -I/home/onkar/Documents/lib/openlte/libtools/hdr -I/home/onkar/Documents/lib/openlte/cmn_hdr -I/home/onkar/Documents/lib/openlte/liblte/hdr   -fPIC -g   -fvisibility=hidden -o CMakeFiles/tools.dir/src/libtools_scoped_lock.cc.o -c /home/onkar/Documents/lib/openlte/libtools/src/libtools_scoped_lock.cc",
+  "file": "/home/onkar/Documents/lib/openlte/libtools/src/libtools_scoped_lock.cc"
+},
+{
+  "directory": "/home/onkar/Documents/lib/openlte/build/libtools",
+  "command": "/usr/bin/c++   -I/usr/include/osmosdr -I/home/onkar/Documents/lib/openlte/libtools/hdr -I/home/onkar/Documents/lib/openlte/cmn_hdr -I/home/onkar/Documents/lib/openlte/liblte/hdr   -fPIC -g   -fvisibility=hidden -o CMakeFiles/tools.dir/src/libtools_ipc_msgq.cc.o -c /home/onkar/Documents/lib/openlte/libtools/src/libtools_ipc_msgq.cc",
+  "file": "/home/onkar/Documents/lib/openlte/libtools/src/libtools_ipc_msgq.cc"
+},
+{
+  "directory": "/home/onkar/Documents/lib/openlte/build/libtools",
+  "command": "/usr/bin/c++   -I/usr/include/osmosdr -I/home/onkar/Documents/lib/openlte/libtools/hdr -I/home/onkar/Documents/lib/openlte/cmn_hdr -I/home/onkar/Documents/lib/openlte/liblte/hdr   -fPIC -g   -fvisibility=hidden -o CMakeFiles/tools.dir/src/libtools_helpers.cc.o -c /home/onkar/Documents/lib/openlte/libtools/src/libtools_helpers.cc",
+  "file": "/home/onkar/Documents/lib/openlte/libtools/src/libtools_helpers.cc"
+},
+{
+  "directory": "/home/onkar/Documents/lib/openlte/build/LTE_fdd_dl_file_gen",
+  "command": "/usr/bin/c++  -DLTE_fdd_dl_fg_EXPORTS -I/usr/include/osmosdr -I/home/onkar/Documents/lib/openlte/LTE_fdd_dl_file_gen/hdr -I/home/onkar/Documents/lib/openlte/liblte/hdr -I/home/onkar/Documents/lib/openlte/cmn_hdr   -fPIC -g -fPIC   -fvisibility=hidden -o CMakeFiles/LTE_fdd_dl_fg.dir/src/LTE_fdd_dl_fg_samp_buf.cc.o -c /home/onkar/Documents/lib/openlte/LTE_fdd_dl_file_gen/src/LTE_fdd_dl_fg_samp_buf.cc",
+  "file": "/home/onkar/Documents/lib/openlte/LTE_fdd_dl_file_gen/src/LTE_fdd_dl_fg_samp_buf.cc"
+},
+{
+  "directory": "/home/onkar/Documents/lib/openlte/build/LTE_fdd_dl_file_scan",
+  "command": "/usr/bin/c++  -DLTE_fdd_dl_fs_EXPORTS -I/usr/include/osmosdr -I/home/onkar/Documents/lib/openlte/LTE_fdd_dl_file_scan/hdr -I/home/onkar/Documents/lib/openlte/liblte/hdr -I/home/onkar/Documents/lib/openlte/cmn_hdr   -fPIC -g -fPIC   -fvisibility=hidden -o CMakeFiles/LTE_fdd_dl_fs.dir/src/LTE_fdd_dl_fs_samp_buf.cc.o -c /home/onkar/Documents/lib/openlte/LTE_fdd_dl_file_scan/src/LTE_fdd_dl_fs_samp_buf.cc",
+  "file": "/home/onkar/Documents/lib/openlte/LTE_fdd_dl_file_scan/src/LTE_fdd_dl_fs_samp_buf.cc"
+},
+{
+  "directory": "/home/onkar/Documents/lib/openlte/build/LTE_fdd_dl_scan",
+  "command": "/usr/bin/c++   -I/usr/include/osmosdr -I/home/onkar/Documents/lib/openlte/LTE_fdd_dl_scan/hdr -I/home/onkar/Documents/lib/openlte/liblte/hdr -I/home/onkar/Documents/lib/openlte/libtools/hdr -I/home/onkar/Documents/lib/openlte/cmn_hdr   -fPIC -g   -fvisibility=hidden -o CMakeFiles/LTE_fdd_dl_scan.dir/src/LTE_fdd_dl_scan_main.cc.o -c /home/onkar/Documents/lib/openlte/LTE_fdd_dl_scan/src/LTE_fdd_dl_scan_main.cc",
+  "file": "/home/onkar/Documents/lib/openlte/LTE_fdd_dl_scan/src/LTE_fdd_dl_scan_main.cc"
+},
+{
+  "directory": "/home/onkar/Documents/lib/openlte/build/LTE_fdd_dl_scan",
+  "command": "/usr/bin/c++   -I/usr/include/osmosdr -I/home/onkar/Documents/lib/openlte/LTE_fdd_dl_scan/hdr -I/home/onkar/Documents/lib/openlte/liblte/hdr -I/home/onkar/Documents/lib/openlte/libtools/hdr -I/home/onkar/Documents/lib/openlte/cmn_hdr   -fPIC -g   -fvisibility=hidden -o CMakeFiles/LTE_fdd_dl_scan.dir/src/LTE_fdd_dl_scan_interface.cc.o -c /home/onkar/Documents/lib/openlte/LTE_fdd_dl_scan/src/LTE_fdd_dl_scan_interface.cc",
+  "file": "/home/onkar/Documents/lib/openlte/LTE_fdd_dl_scan/src/LTE_fdd_dl_scan_interface.cc"
+},
+{
+  "directory": "/home/onkar/Documents/lib/openlte/build/LTE_fdd_dl_scan",
+  "command": "/usr/bin/c++   -I/usr/include/osmosdr -I/home/onkar/Documents/lib/openlte/LTE_fdd_dl_scan/hdr -I/home/onkar/Documents/lib/openlte/liblte/hdr -I/home/onkar/Documents/lib/openlte/libtools/hdr -I/home/onkar/Documents/lib/openlte/cmn_hdr   -fPIC -g   -fvisibility=hidden -o CMakeFiles/LTE_fdd_dl_scan.dir/src/LTE_fdd_dl_scan_flowgraph.cc.o -c /home/onkar/Documents/lib/openlte/LTE_fdd_dl_scan/src/LTE_fdd_dl_scan_flowgraph.cc",
+  "file": "/home/onkar/Documents/lib/openlte/LTE_fdd_dl_scan/src/LTE_fdd_dl_scan_flowgraph.cc"
+},
+{
+  "directory": "/home/onkar/Documents/lib/openlte/build/LTE_fdd_dl_scan",
+  "command": "/usr/bin/c++   -I/usr/include/osmosdr -I/home/onkar/Documents/lib/openlte/LTE_fdd_dl_scan/hdr -I/home/onkar/Documents/lib/openlte/liblte/hdr -I/home/onkar/Documents/lib/openlte/libtools/hdr -I/home/onkar/Documents/lib/openlte/cmn_hdr   -fPIC -g   -fvisibility=hidden -o CMakeFiles/LTE_fdd_dl_scan.dir/src/LTE_fdd_dl_scan_state_machine.cc.o -c /home/onkar/Documents/lib/openlte/LTE_fdd_dl_scan/src/LTE_fdd_dl_scan_state_machine.cc",
+  "file": "/home/onkar/Documents/lib/openlte/LTE_fdd_dl_scan/src/LTE_fdd_dl_scan_state_machine.cc"
+},
+{
+  "directory": "/home/onkar/Documents/lib/openlte/build/LTE_file_recorder",
+  "command": "/usr/bin/c++   -I/usr/include/osmosdr -I/home/onkar/Documents/lib/openlte/LTE_file_recorder/hdr -I/home/onkar/Documents/lib/openlte/liblte/hdr -I/home/onkar/Documents/lib/openlte/libtools/hdr -I/home/onkar/Documents/lib/openlte/cmn_hdr   -fPIC -g   -fvisibility=hidden -o CMakeFiles/LTE_file_recorder.dir/src/LTE_file_recorder_main.cc.o -c /home/onkar/Documents/lib/openlte/LTE_file_recorder/src/LTE_file_recorder_main.cc",
+  "file": "/home/onkar/Documents/lib/openlte/LTE_file_recorder/src/LTE_file_recorder_main.cc"
+},
+{
+  "directory": "/home/onkar/Documents/lib/openlte/build/LTE_file_recorder",
+  "command": "/usr/bin/c++   -I/usr/include/osmosdr -I/home/onkar/Documents/lib/openlte/LTE_file_recorder/hdr -I/home/onkar/Documents/lib/openlte/liblte/hdr -I/home/onkar/Documents/lib/openlte/libtools/hdr -I/home/onkar/Documents/lib/openlte/cmn_hdr   -fPIC -g   -fvisibility=hidden -o CMakeFiles/LTE_file_recorder.dir/src/LTE_file_recorder_interface.cc.o -c /home/onkar/Documents/lib/openlte/LTE_file_recorder/src/LTE_file_recorder_interface.cc",
+  "file": "/home/onkar/Documents/lib/openlte/LTE_file_recorder/src/LTE_file_recorder_interface.cc"
+},
+{
+  "directory": "/home/onkar/Documents/lib/openlte/build/LTE_file_recorder",
+  "command": "/usr/bin/c++   -I/usr/include/osmosdr -I/home/onkar/Documents/lib/openlte/LTE_file_recorder/hdr -I/home/onkar/Documents/lib/openlte/liblte/hdr -I/home/onkar/Documents/lib/openlte/libtools/hdr -I/home/onkar/Documents/lib/openlte/cmn_hdr   -fPIC -g   -fvisibility=hidden -o CMakeFiles/LTE_file_recorder.dir/src/LTE_file_recorder_flowgraph.cc.o -c /home/onkar/Documents/lib/openlte/LTE_file_recorder/src/LTE_file_recorder_flowgraph.cc",
+  "file": "/home/onkar/Documents/lib/openlte/LTE_file_recorder/src/LTE_file_recorder_flowgraph.cc"
+},
+{
+  "directory": "/home/onkar/Documents/lib/openlte/build/LTE_fdd_enodeb",
+  "command": "/usr/bin/c++   -I/usr/include/osmosdr -I/home/onkar/Documents/lib/openlte/LTE_fdd_enodeb/hdr -I/home/onkar/Documents/lib/openlte/liblte/hdr -I/home/onkar/Documents/lib/openlte/libtools/hdr -I/home/onkar/Documents/lib/openlte/cmn_hdr   -fPIC -g   -fvisibility=hidden -o CMakeFiles/LTE_fdd_enodeb.dir/src/LTE_fdd_enb_main.cc.o -c /home/onkar/Documents/lib/openlte/LTE_fdd_enodeb/src/LTE_fdd_enb_main.cc",
+  "file": "/home/onkar/Documents/lib/openlte/LTE_fdd_enodeb/src/LTE_fdd_enb_main.cc"
+},
+{
+  "directory": "/home/onkar/Documents/lib/openlte/build/LTE_fdd_enodeb",
+  "command": "/usr/bin/c++   -I/usr/include/osmosdr -I/home/onkar/Documents/lib/openlte/LTE_fdd_enodeb/hdr -I/home/onkar/Documents/lib/openlte/liblte/hdr -I/home/onkar/Documents/lib/openlte/libtools/hdr -I/home/onkar/Documents/lib/openlte/cmn_hdr   -fPIC -g   -fvisibility=hidden -o CMakeFiles/LTE_fdd_enodeb.dir/src/LTE_fdd_enb_interface.cc.o -c /home/onkar/Documents/lib/openlte/LTE_fdd_enodeb/src/LTE_fdd_enb_interface.cc",
+  "file": "/home/onkar/Documents/lib/openlte/LTE_fdd_enodeb/src/LTE_fdd_enb_interface.cc"
+},
+{
+  "directory": "/home/onkar/Documents/lib/openlte/build/LTE_fdd_enodeb",
+  "command": "/usr/bin/c++   -I/usr/include/osmosdr -I/home/onkar/Documents/lib/openlte/LTE_fdd_enodeb/hdr -I/home/onkar/Documents/lib/openlte/liblte/hdr -I/home/onkar/Documents/lib/openlte/libtools/hdr -I/home/onkar/Documents/lib/openlte/cmn_hdr   -fPIC -g   -fvisibility=hidden -o CMakeFiles/LTE_fdd_enodeb.dir/src/LTE_fdd_enb_cnfg_db.cc.o -c /home/onkar/Documents/lib/openlte/LTE_fdd_enodeb/src/LTE_fdd_enb_cnfg_db.cc",
+  "file": "/home/onkar/Documents/lib/openlte/LTE_fdd_enodeb/src/LTE_fdd_enb_cnfg_db.cc"
+},
+{
+  "directory": "/home/onkar/Documents/lib/openlte/build/LTE_fdd_enodeb",
+  "command": "/usr/bin/c++   -I/usr/include/osmosdr -I/home/onkar/Documents/lib/openlte/LTE_fdd_enodeb/hdr -I/home/onkar/Documents/lib/openlte/liblte/hdr -I/home/onkar/Documents/lib/openlte/libtools/hdr -I/home/onkar/Documents/lib/openlte/cmn_hdr   -fPIC -g   -fvisibility=hidden -o CMakeFiles/LTE_fdd_enodeb.dir/src/LTE_fdd_enb_msgq.cc.o -c /home/onkar/Documents/lib/openlte/LTE_fdd_enodeb/src/LTE_fdd_enb_msgq.cc",
+  "file": "/home/onkar/Documents/lib/openlte/LTE_fdd_enodeb/src/LTE_fdd_enb_msgq.cc"
+},
+{
+  "directory": "/home/onkar/Documents/lib/openlte/build/LTE_fdd_enodeb",
+  "command": "/usr/bin/c++   -I/usr/include/osmosdr -I/home/onkar/Documents/lib/openlte/LTE_fdd_enodeb/hdr -I/home/onkar/Documents/lib/openlte/liblte/hdr -I/home/onkar/Documents/lib/openlte/libtools/hdr -I/home/onkar/Documents/lib/openlte/cmn_hdr   -fPIC -g   -fvisibility=hidden -o CMakeFiles/LTE_fdd_enodeb.dir/src/LTE_fdd_enb_hss.cc.o -c /home/onkar/Documents/lib/openlte/LTE_fdd_enodeb/src/LTE_fdd_enb_hss.cc",
+  "file": "/home/onkar/Documents/lib/openlte/LTE_fdd_enodeb/src/LTE_fdd_enb_hss.cc"
+},
+{
+  "directory": "/home/onkar/Documents/lib/openlte/build/LTE_fdd_enodeb",
+  "command": "/usr/bin/c++   -I/usr/include/osmosdr -I/home/onkar/Documents/lib/openlte/LTE_fdd_enodeb/hdr -I/home/onkar/Documents/lib/openlte/liblte/hdr -I/home/onkar/Documents/lib/openlte/libtools/hdr -I/home/onkar/Documents/lib/openlte/cmn_hdr   -fPIC -g   -fvisibility=hidden -o CMakeFiles/LTE_fdd_enodeb.dir/src/LTE_fdd_enb_user.cc.o -c /home/onkar/Documents/lib/openlte/LTE_fdd_enodeb/src/LTE_fdd_enb_user.cc",
+  "file": "/home/onkar/Documents/lib/openlte/LTE_fdd_enodeb/src/LTE_fdd_enb_user.cc"
+},
+{
+  "directory": "/home/onkar/Documents/lib/openlte/build/LTE_fdd_enodeb",
+  "command": "/usr/bin/c++   -I/usr/include/osmosdr -I/home/onkar/Documents/lib/openlte/LTE_fdd_enodeb/hdr -I/home/onkar/Documents/lib/openlte/liblte/hdr -I/home/onkar/Documents/lib/openlte/libtools/hdr -I/home/onkar/Documents/lib/openlte/cmn_hdr   -fPIC -g   -fvisibility=hidden -o CMakeFiles/LTE_fdd_enodeb.dir/src/LTE_fdd_enb_user_mgr.cc.o -c /home/onkar/Documents/lib/openlte/LTE_fdd_enodeb/src/LTE_fdd_enb_user_mgr.cc",
+  "file": "/home/onkar/Documents/lib/openlte/LTE_fdd_enodeb/src/LTE_fdd_enb_user_mgr.cc"
+},
+{
+  "directory": "/home/onkar/Documents/lib/openlte/build/LTE_fdd_enodeb",
+  "command": "/usr/bin/c++   -I/usr/include/osmosdr -I/home/onkar/Documents/lib/openlte/LTE_fdd_enodeb/hdr -I/home/onkar/Documents/lib/openlte/liblte/hdr -I/home/onkar/Documents/lib/openlte/libtools/hdr -I/home/onkar/Documents/lib/openlte/cmn_hdr   -fPIC -g   -fvisibility=hidden -o CMakeFiles/LTE_fdd_enodeb.dir/src/LTE_fdd_enb_rb.cc.o -c /home/onkar/Documents/lib/openlte/LTE_fdd_enodeb/src/LTE_fdd_enb_rb.cc",
+  "file": "/home/onkar/Documents/lib/openlte/LTE_fdd_enodeb/src/LTE_fdd_enb_rb.cc"
+},
+{
+  "directory": "/home/onkar/Documents/lib/openlte/build/LTE_fdd_enodeb",
+  "command": "/usr/bin/c++   -I/usr/include/osmosdr -I/home/onkar/Documents/lib/openlte/LTE_fdd_enodeb/hdr -I/home/onkar/Documents/lib/openlte/liblte/hdr -I/home/onkar/Documents/lib/openlte/libtools/hdr -I/home/onkar/Documents/lib/openlte/cmn_hdr   -fPIC -g   -fvisibility=hidden -o CMakeFiles/LTE_fdd_enodeb.dir/src/LTE_fdd_enb_timer.cc.o -c /home/onkar/Documents/lib/openlte/LTE_fdd_enodeb/src/LTE_fdd_enb_timer.cc",
+  "file": "/home/onkar/Documents/lib/openlte/LTE_fdd_enodeb/src/LTE_fdd_enb_timer.cc"
+},
+{
+  "directory": "/home/onkar/Documents/lib/openlte/build/LTE_fdd_enodeb",
+  "command": "/usr/bin/c++   -I/usr/include/osmosdr -I/home/onkar/Documents/lib/openlte/LTE_fdd_enodeb/hdr -I/home/onkar/Documents/lib/openlte/liblte/hdr -I/home/onkar/Documents/lib/openlte/libtools/hdr -I/home/onkar/Documents/lib/openlte/cmn_hdr   -fPIC -g   -fvisibility=hidden -o CMakeFiles/LTE_fdd_enodeb.dir/src/LTE_fdd_enb_timer_mgr.cc.o -c /home/onkar/Documents/lib/openlte/LTE_fdd_enodeb/src/LTE_fdd_enb_timer_mgr.cc",
+  "file": "/home/onkar/Documents/lib/openlte/LTE_fdd_enodeb/src/LTE_fdd_enb_timer_mgr.cc"
+},
+{
+  "directory": "/home/onkar/Documents/lib/openlte/build/LTE_fdd_enodeb",
+  "command": "/usr/bin/c++   -I/usr/include/osmosdr -I/home/onkar/Documents/lib/openlte/LTE_fdd_enodeb/hdr -I/home/onkar/Documents/lib/openlte/liblte/hdr -I/home/onkar/Documents/lib/openlte/libtools/hdr -I/home/onkar/Documents/lib/openlte/cmn_hdr   -fPIC -g   -fvisibility=hidden -o CMakeFiles/LTE_fdd_enodeb.dir/src/LTE_fdd_enb_radio.cc.o -c /home/onkar/Documents/lib/openlte/LTE_fdd_enodeb/src/LTE_fdd_enb_radio.cc",
+  "file": "/home/onkar/Documents/lib/openlte/LTE_fdd_enodeb/src/LTE_fdd_enb_radio.cc"
+},
+{
+  "directory": "/home/onkar/Documents/lib/openlte/build/LTE_fdd_enodeb",
+  "command": "/usr/bin/c++   -I/usr/include/osmosdr -I/home/onkar/Documents/lib/openlte/LTE_fdd_enodeb/hdr -I/home/onkar/Documents/lib/openlte/liblte/hdr -I/home/onkar/Documents/lib/openlte/libtools/hdr -I/home/onkar/Documents/lib/openlte/cmn_hdr   -fPIC -g   -fvisibility=hidden -o CMakeFiles/LTE_fdd_enodeb.dir/src/LTE_fdd_enb_phy.cc.o -c /home/onkar/Documents/lib/openlte/LTE_fdd_enodeb/src/LTE_fdd_enb_phy.cc",
+  "file": "/home/onkar/Documents/lib/openlte/LTE_fdd_enodeb/src/LTE_fdd_enb_phy.cc"
+},
+{
+  "directory": "/home/onkar/Documents/lib/openlte/build/LTE_fdd_enodeb",
+  "command": "/usr/bin/c++   -I/usr/include/osmosdr -I/home/onkar/Documents/lib/openlte/LTE_fdd_enodeb/hdr -I/home/onkar/Documents/lib/openlte/liblte/hdr -I/home/onkar/Documents/lib/openlte/libtools/hdr -I/home/onkar/Documents/lib/openlte/cmn_hdr   -fPIC -g   -fvisibility=hidden -o CMakeFiles/LTE_fdd_enodeb.dir/src/LTE_fdd_enb_mac.cc.o -c /home/onkar/Documents/lib/openlte/LTE_fdd_enodeb/src/LTE_fdd_enb_mac.cc",
+  "file": "/home/onkar/Documents/lib/openlte/LTE_fdd_enodeb/src/LTE_fdd_enb_mac.cc"
+},
+{
+  "directory": "/home/onkar/Documents/lib/openlte/build/LTE_fdd_enodeb",
+  "command": "/usr/bin/c++   -I/usr/include/osmosdr -I/home/onkar/Documents/lib/openlte/LTE_fdd_enodeb/hdr -I/home/onkar/Documents/lib/openlte/liblte/hdr -I/home/onkar/Documents/lib/openlte/libtools/hdr -I/home/onkar/Documents/lib/openlte/cmn_hdr   -fPIC -g   -fvisibility=hidden -o CMakeFiles/LTE_fdd_enodeb.dir/src/LTE_fdd_enb_rlc.cc.o -c /home/onkar/Documents/lib/openlte/LTE_fdd_enodeb/src/LTE_fdd_enb_rlc.cc",
+  "file": "/home/onkar/Documents/lib/openlte/LTE_fdd_enodeb/src/LTE_fdd_enb_rlc.cc"
+},
+{
+  "directory": "/home/onkar/Documents/lib/openlte/build/LTE_fdd_enodeb",
+  "command": "/usr/bin/c++   -I/usr/include/osmosdr -I/home/onkar/Documents/lib/openlte/LTE_fdd_enodeb/hdr -I/home/onkar/Documents/lib/openlte/liblte/hdr -I/home/onkar/Documents/lib/openlte/libtools/hdr -I/home/onkar/Documents/lib/openlte/cmn_hdr   -fPIC -g   -fvisibility=hidden -o CMakeFiles/LTE_fdd_enodeb.dir/src/LTE_fdd_enb_pdcp.cc.o -c /home/onkar/Documents/lib/openlte/LTE_fdd_enodeb/src/LTE_fdd_enb_pdcp.cc",
+  "file": "/home/onkar/Documents/lib/openlte/LTE_fdd_enodeb/src/LTE_fdd_enb_pdcp.cc"
+},
+{
+  "directory": "/home/onkar/Documents/lib/openlte/build/LTE_fdd_enodeb",
+  "command": "/usr/bin/c++   -I/usr/include/osmosdr -I/home/onkar/Documents/lib/openlte/LTE_fdd_enodeb/hdr -I/home/onkar/Documents/lib/openlte/liblte/hdr -I/home/onkar/Documents/lib/openlte/libtools/hdr -I/home/onkar/Documents/lib/openlte/cmn_hdr   -fPIC -g   -fvisibility=hidden -o CMakeFiles/LTE_fdd_enodeb.dir/src/LTE_fdd_enb_rrc.cc.o -c /home/onkar/Documents/lib/openlte/LTE_fdd_enodeb/src/LTE_fdd_enb_rrc.cc",
+  "file": "/home/onkar/Documents/lib/openlte/LTE_fdd_enodeb/src/LTE_fdd_enb_rrc.cc"
+},
+{
+  "directory": "/home/onkar/Documents/lib/openlte/build/LTE_fdd_enodeb",
+  "command": "/usr/bin/c++   -I/usr/include/osmosdr -I/home/onkar/Documents/lib/openlte/LTE_fdd_enodeb/hdr -I/home/onkar/Documents/lib/openlte/liblte/hdr -I/home/onkar/Documents/lib/openlte/libtools/hdr -I/home/onkar/Documents/lib/openlte/cmn_hdr   -fPIC -g   -fvisibility=hidden -o CMakeFiles/LTE_fdd_enodeb.dir/src/LTE_fdd_enb_mme.cc.o -c /home/onkar/Documents/lib/openlte/LTE_fdd_enodeb/src/LTE_fdd_enb_mme.cc",
+  "file": "/home/onkar/Documents/lib/openlte/LTE_fdd_enodeb/src/LTE_fdd_enb_mme.cc"
+},
+{
+  "directory": "/home/onkar/Documents/lib/openlte/build/LTE_fdd_enodeb",
+  "command": "/usr/bin/c++   -I/usr/include/osmosdr -I/home/onkar/Documents/lib/openlte/LTE_fdd_enodeb/hdr -I/home/onkar/Documents/lib/openlte/liblte/hdr -I/home/onkar/Documents/lib/openlte/libtools/hdr -I/home/onkar/Documents/lib/openlte/cmn_hdr   -fPIC -g   -fvisibility=hidden -o CMakeFiles/LTE_fdd_enodeb.dir/src/LTE_fdd_enb_gw.cc.o -c /home/onkar/Documents/lib/openlte/LTE_fdd_enodeb/src/LTE_fdd_enb_gw.cc",
+  "file": "/home/onkar/Documents/lib/openlte/LTE_fdd_enodeb/src/LTE_fdd_enb_gw.cc"
+}
+]
