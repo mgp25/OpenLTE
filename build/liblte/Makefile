@@ -48,10 +48,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/onkar/Documents/lib/openlte
+CMAKE_SOURCE_DIR = /home/onkar/Documents/Projects/5G-Attacks
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/onkar/Documents/lib/openlte/build
+CMAKE_BINARY_DIR = /home/onkar/Documents/Projects/5G-Attacks/build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -137,14 +137,14 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	cd /home/onkar/Documents/lib/openlte/build && $(CMAKE_COMMAND) -E cmake_progress_start /home/onkar/Documents/lib/openlte/build/CMakeFiles /home/onkar/Documents/lib/openlte/build/liblte/CMakeFiles/progress.marks
-	cd /home/onkar/Documents/lib/openlte/build && $(MAKE) -f CMakeFiles/Makefile2 liblte/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/onkar/Documents/lib/openlte/build/CMakeFiles 0
+	cd /home/onkar/Documents/Projects/5G-Attacks/build && $(CMAKE_COMMAND) -E cmake_progress_start /home/onkar/Documents/Projects/5G-Attacks/build/CMakeFiles /home/onkar/Documents/Projects/5G-Attacks/build/liblte/CMakeFiles/progress.marks
+	cd /home/onkar/Documents/Projects/5G-Attacks/build && $(MAKE) -f CMakeFiles/Makefile2 liblte/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/onkar/Documents/Projects/5G-Attacks/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /home/onkar/Documents/lib/openlte/build && $(MAKE) -f CMakeFiles/Makefile2 liblte/clean
+	cd /home/onkar/Documents/Projects/5G-Attacks/build && $(MAKE) -f CMakeFiles/Makefile2 liblte/clean
 .PHONY : clean
 
 # The main clean target
@@ -154,22 +154,22 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd /home/onkar/Documents/lib/openlte/build && $(MAKE) -f CMakeFiles/Makefile2 liblte/preinstall
+	cd /home/onkar/Documents/Projects/5G-Attacks/build && $(MAKE) -f CMakeFiles/Makefile2 liblte/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /home/onkar/Documents/lib/openlte/build && $(MAKE) -f CMakeFiles/Makefile2 liblte/preinstall
+	cd /home/onkar/Documents/Projects/5G-Attacks/build && $(MAKE) -f CMakeFiles/Makefile2 liblte/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	cd /home/onkar/Documents/lib/openlte/build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /home/onkar/Documents/Projects/5G-Attacks/build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
 # Convenience name for target.
 liblte/CMakeFiles/liblte_common_test.dir/rule:
-	cd /home/onkar/Documents/lib/openlte/build && $(MAKE) -f CMakeFiles/Makefile2 liblte/CMakeFiles/liblte_common_test.dir/rule
+	cd /home/onkar/Documents/Projects/5G-Attacks/build && $(MAKE) -f CMakeFiles/Makefile2 liblte/CMakeFiles/liblte_common_test.dir/rule
 .PHONY : liblte/CMakeFiles/liblte_common_test.dir/rule
 
 # Convenience name for target.
@@ -179,12 +179,12 @@ liblte_common_test: liblte/CMakeFiles/liblte_common_test.dir/rule
 
 # fast build rule for target.
 liblte_common_test/fast:
-	cd /home/onkar/Documents/lib/openlte/build && $(MAKE) -f liblte/CMakeFiles/liblte_common_test.dir/build.make liblte/CMakeFiles/liblte_common_test.dir/build
+	cd /home/onkar/Documents/Projects/5G-Attacks/build && $(MAKE) -f liblte/CMakeFiles/liblte_common_test.dir/build.make liblte/CMakeFiles/liblte_common_test.dir/build
 .PHONY : liblte_common_test/fast
 
 # Convenience name for target.
 liblte/CMakeFiles/lte.dir/rule:
-	cd /home/onkar/Documents/lib/openlte/build && $(MAKE) -f CMakeFiles/Makefile2 liblte/CMakeFiles/lte.dir/rule
+	cd /home/onkar/Documents/Projects/5G-Attacks/build && $(MAKE) -f CMakeFiles/Makefile2 liblte/CMakeFiles/lte.dir/rule
 .PHONY : liblte/CMakeFiles/lte.dir/rule
 
 # Convenience name for target.
@@ -194,7 +194,7 @@ lte: liblte/CMakeFiles/lte.dir/rule
 
 # fast build rule for target.
 lte/fast:
-	cd /home/onkar/Documents/lib/openlte/build && $(MAKE) -f liblte/CMakeFiles/lte.dir/build.make liblte/CMakeFiles/lte.dir/build
+	cd /home/onkar/Documents/Projects/5G-Attacks/build && $(MAKE) -f liblte/CMakeFiles/lte.dir/build.make liblte/CMakeFiles/lte.dir/build
 .PHONY : lte/fast
 
 src/liblte_common.o: src/liblte_common.cc.o
@@ -203,8 +203,8 @@ src/liblte_common.o: src/liblte_common.cc.o
 
 # target to build an object file
 src/liblte_common.cc.o:
-	cd /home/onkar/Documents/lib/openlte/build && $(MAKE) -f liblte/CMakeFiles/liblte_common_test.dir/build.make liblte/CMakeFiles/liblte_common_test.dir/src/liblte_common.cc.o
-	cd /home/onkar/Documents/lib/openlte/build && $(MAKE) -f liblte/CMakeFiles/lte.dir/build.make liblte/CMakeFiles/lte.dir/src/liblte_common.cc.o
+	cd /home/onkar/Documents/Projects/5G-Attacks/build && $(MAKE) -f liblte/CMakeFiles/liblte_common_test.dir/build.make liblte/CMakeFiles/liblte_common_test.dir/src/liblte_common.cc.o
+	cd /home/onkar/Documents/Projects/5G-Attacks/build && $(MAKE) -f liblte/CMakeFiles/lte.dir/build.make liblte/CMakeFiles/lte.dir/src/liblte_common.cc.o
 .PHONY : src/liblte_common.cc.o
 
 src/liblte_common.i: src/liblte_common.cc.i
@@ -213,8 +213,8 @@ src/liblte_common.i: src/liblte_common.cc.i
 
 # target to preprocess a source file
 src/liblte_common.cc.i:
-	cd /home/onkar/Documents/lib/openlte/build && $(MAKE) -f liblte/CMakeFiles/liblte_common_test.dir/build.make liblte/CMakeFiles/liblte_common_test.dir/src/liblte_common.cc.i
-	cd /home/onkar/Documents/lib/openlte/build && $(MAKE) -f liblte/CMakeFiles/lte.dir/build.make liblte/CMakeFiles/lte.dir/src/liblte_common.cc.i
+	cd /home/onkar/Documents/Projects/5G-Attacks/build && $(MAKE) -f liblte/CMakeFiles/liblte_common_test.dir/build.make liblte/CMakeFiles/liblte_common_test.dir/src/liblte_common.cc.i
+	cd /home/onkar/Documents/Projects/5G-Attacks/build && $(MAKE) -f liblte/CMakeFiles/lte.dir/build.make liblte/CMakeFiles/lte.dir/src/liblte_common.cc.i
 .PHONY : src/liblte_common.cc.i
 
 src/liblte_common.s: src/liblte_common.cc.s
@@ -223,8 +223,8 @@ src/liblte_common.s: src/liblte_common.cc.s
 
 # target to generate assembly for a file
 src/liblte_common.cc.s:
-	cd /home/onkar/Documents/lib/openlte/build && $(MAKE) -f liblte/CMakeFiles/liblte_common_test.dir/build.make liblte/CMakeFiles/liblte_common_test.dir/src/liblte_common.cc.s
-	cd /home/onkar/Documents/lib/openlte/build && $(MAKE) -f liblte/CMakeFiles/lte.dir/build.make liblte/CMakeFiles/lte.dir/src/liblte_common.cc.s
+	cd /home/onkar/Documents/Projects/5G-Attacks/build && $(MAKE) -f liblte/CMakeFiles/liblte_common_test.dir/build.make liblte/CMakeFiles/liblte_common_test.dir/src/liblte_common.cc.s
+	cd /home/onkar/Documents/Projects/5G-Attacks/build && $(MAKE) -f liblte/CMakeFiles/lte.dir/build.make liblte/CMakeFiles/lte.dir/src/liblte_common.cc.s
 .PHONY : src/liblte_common.cc.s
 
 src/liblte_interface.o: src/liblte_interface.cc.o
@@ -233,7 +233,7 @@ src/liblte_interface.o: src/liblte_interface.cc.o
 
 # target to build an object file
 src/liblte_interface.cc.o:
-	cd /home/onkar/Documents/lib/openlte/build && $(MAKE) -f liblte/CMakeFiles/lte.dir/build.make liblte/CMakeFiles/lte.dir/src/liblte_interface.cc.o
+	cd /home/onkar/Documents/Projects/5G-Attacks/build && $(MAKE) -f liblte/CMakeFiles/lte.dir/build.make liblte/CMakeFiles/lte.dir/src/liblte_interface.cc.o
 .PHONY : src/liblte_interface.cc.o
 
 src/liblte_interface.i: src/liblte_interface.cc.i
@@ -242,7 +242,7 @@ src/liblte_interface.i: src/liblte_interface.cc.i
 
 # target to preprocess a source file
 src/liblte_interface.cc.i:
-	cd /home/onkar/Documents/lib/openlte/build && $(MAKE) -f liblte/CMakeFiles/lte.dir/build.make liblte/CMakeFiles/lte.dir/src/liblte_interface.cc.i
+	cd /home/onkar/Documents/Projects/5G-Attacks/build && $(MAKE) -f liblte/CMakeFiles/lte.dir/build.make liblte/CMakeFiles/lte.dir/src/liblte_interface.cc.i
 .PHONY : src/liblte_interface.cc.i
 
 src/liblte_interface.s: src/liblte_interface.cc.s
@@ -251,7 +251,7 @@ src/liblte_interface.s: src/liblte_interface.cc.s
 
 # target to generate assembly for a file
 src/liblte_interface.cc.s:
-	cd /home/onkar/Documents/lib/openlte/build && $(MAKE) -f liblte/CMakeFiles/lte.dir/build.make liblte/CMakeFiles/lte.dir/src/liblte_interface.cc.s
+	cd /home/onkar/Documents/Projects/5G-Attacks/build && $(MAKE) -f liblte/CMakeFiles/lte.dir/build.make liblte/CMakeFiles/lte.dir/src/liblte_interface.cc.s
 .PHONY : src/liblte_interface.cc.s
 
 src/liblte_mac.o: src/liblte_mac.cc.o
@@ -260,7 +260,7 @@ src/liblte_mac.o: src/liblte_mac.cc.o
 
 # target to build an object file
 src/liblte_mac.cc.o:
-	cd /home/onkar/Documents/lib/openlte/build && $(MAKE) -f liblte/CMakeFiles/lte.dir/build.make liblte/CMakeFiles/lte.dir/src/liblte_mac.cc.o
+	cd /home/onkar/Documents/Projects/5G-Attacks/build && $(MAKE) -f liblte/CMakeFiles/lte.dir/build.make liblte/CMakeFiles/lte.dir/src/liblte_mac.cc.o
 .PHONY : src/liblte_mac.cc.o
 
 src/liblte_mac.i: src/liblte_mac.cc.i
@@ -269,7 +269,7 @@ src/liblte_mac.i: src/liblte_mac.cc.i
 
 # target to preprocess a source file
 src/liblte_mac.cc.i:
-	cd /home/onkar/Documents/lib/openlte/build && $(MAKE) -f liblte/CMakeFiles/lte.dir/build.make liblte/CMakeFiles/lte.dir/src/liblte_mac.cc.i
+	cd /home/onkar/Documents/Projects/5G-Attacks/build && $(MAKE) -f liblte/CMakeFiles/lte.dir/build.make liblte/CMakeFiles/lte.dir/src/liblte_mac.cc.i
 .PHONY : src/liblte_mac.cc.i
 
 src/liblte_mac.s: src/liblte_mac.cc.s
@@ -278,7 +278,7 @@ src/liblte_mac.s: src/liblte_mac.cc.s
 
 # target to generate assembly for a file
 src/liblte_mac.cc.s:
-	cd /home/onkar/Documents/lib/openlte/build && $(MAKE) -f liblte/CMakeFiles/lte.dir/build.make liblte/CMakeFiles/lte.dir/src/liblte_mac.cc.s
+	cd /home/onkar/Documents/Projects/5G-Attacks/build && $(MAKE) -f liblte/CMakeFiles/lte.dir/build.make liblte/CMakeFiles/lte.dir/src/liblte_mac.cc.s
 .PHONY : src/liblte_mac.cc.s
 
 src/liblte_mme.o: src/liblte_mme.cc.o
@@ -287,7 +287,7 @@ src/liblte_mme.o: src/liblte_mme.cc.o
 
 # target to build an object file
 src/liblte_mme.cc.o:
-	cd /home/onkar/Documents/lib/openlte/build && $(MAKE) -f liblte/CMakeFiles/lte.dir/build.make liblte/CMakeFiles/lte.dir/src/liblte_mme.cc.o
+	cd /home/onkar/Documents/Projects/5G-Attacks/build && $(MAKE) -f liblte/CMakeFiles/lte.dir/build.make liblte/CMakeFiles/lte.dir/src/liblte_mme.cc.o
 .PHONY : src/liblte_mme.cc.o
 
 src/liblte_mme.i: src/liblte_mme.cc.i
@@ -296,7 +296,7 @@ src/liblte_mme.i: src/liblte_mme.cc.i
 
 # target to preprocess a source file
 src/liblte_mme.cc.i:
-	cd /home/onkar/Documents/lib/openlte/build && $(MAKE) -f liblte/CMakeFiles/lte.dir/build.make liblte/CMakeFiles/lte.dir/src/liblte_mme.cc.i
+	cd /home/onkar/Documents/Projects/5G-Attacks/build && $(MAKE) -f liblte/CMakeFiles/lte.dir/build.make liblte/CMakeFiles/lte.dir/src/liblte_mme.cc.i
 .PHONY : src/liblte_mme.cc.i
 
 src/liblte_mme.s: src/liblte_mme.cc.s
@@ -305,7 +305,7 @@ src/liblte_mme.s: src/liblte_mme.cc.s
 
 # target to generate assembly for a file
 src/liblte_mme.cc.s:
-	cd /home/onkar/Documents/lib/openlte/build && $(MAKE) -f liblte/CMakeFiles/lte.dir/build.make liblte/CMakeFiles/lte.dir/src/liblte_mme.cc.s
+	cd /home/onkar/Documents/Projects/5G-Attacks/build && $(MAKE) -f liblte/CMakeFiles/lte.dir/build.make liblte/CMakeFiles/lte.dir/src/liblte_mme.cc.s
 .PHONY : src/liblte_mme.cc.s
 
 src/liblte_pdcp.o: src/liblte_pdcp.cc.o
@@ -314,7 +314,7 @@ src/liblte_pdcp.o: src/liblte_pdcp.cc.o
 
 # target to build an object file
 src/liblte_pdcp.cc.o:
-	cd /home/onkar/Documents/lib/openlte/build && $(MAKE) -f liblte/CMakeFiles/lte.dir/build.make liblte/CMakeFiles/lte.dir/src/liblte_pdcp.cc.o
+	cd /home/onkar/Documents/Projects/5G-Attacks/build && $(MAKE) -f liblte/CMakeFiles/lte.dir/build.make liblte/CMakeFiles/lte.dir/src/liblte_pdcp.cc.o
 .PHONY : src/liblte_pdcp.cc.o
 
 src/liblte_pdcp.i: src/liblte_pdcp.cc.i
@@ -323,7 +323,7 @@ src/liblte_pdcp.i: src/liblte_pdcp.cc.i
 
 # target to preprocess a source file
 src/liblte_pdcp.cc.i:
-	cd /home/onkar/Documents/lib/openlte/build && $(MAKE) -f liblte/CMakeFiles/lte.dir/build.make liblte/CMakeFiles/lte.dir/src/liblte_pdcp.cc.i
+	cd /home/onkar/Documents/Projects/5G-Attacks/build && $(MAKE) -f liblte/CMakeFiles/lte.dir/build.make liblte/CMakeFiles/lte.dir/src/liblte_pdcp.cc.i
 .PHONY : src/liblte_pdcp.cc.i
 
 src/liblte_pdcp.s: src/liblte_pdcp.cc.s
@@ -332,7 +332,7 @@ src/liblte_pdcp.s: src/liblte_pdcp.cc.s
 
 # target to generate assembly for a file
 src/liblte_pdcp.cc.s:
-	cd /home/onkar/Documents/lib/openlte/build && $(MAKE) -f liblte/CMakeFiles/lte.dir/build.make liblte/CMakeFiles/lte.dir/src/liblte_pdcp.cc.s
+	cd /home/onkar/Documents/Projects/5G-Attacks/build && $(MAKE) -f liblte/CMakeFiles/lte.dir/build.make liblte/CMakeFiles/lte.dir/src/liblte_pdcp.cc.s
 .PHONY : src/liblte_pdcp.cc.s
 
 src/liblte_phy.o: src/liblte_phy.cc.o
@@ -341,7 +341,7 @@ src/liblte_phy.o: src/liblte_phy.cc.o
 
 # target to build an object file
 src/liblte_phy.cc.o:
-	cd /home/onkar/Documents/lib/openlte/build && $(MAKE) -f liblte/CMakeFiles/lte.dir/build.make liblte/CMakeFiles/lte.dir/src/liblte_phy.cc.o
+	cd /home/onkar/Documents/Projects/5G-Attacks/build && $(MAKE) -f liblte/CMakeFiles/lte.dir/build.make liblte/CMakeFiles/lte.dir/src/liblte_phy.cc.o
 .PHONY : src/liblte_phy.cc.o
 
 src/liblte_phy.i: src/liblte_phy.cc.i
@@ -350,7 +350,7 @@ src/liblte_phy.i: src/liblte_phy.cc.i
 
 # target to preprocess a source file
 src/liblte_phy.cc.i:
-	cd /home/onkar/Documents/lib/openlte/build && $(MAKE) -f liblte/CMakeFiles/lte.dir/build.make liblte/CMakeFiles/lte.dir/src/liblte_phy.cc.i
+	cd /home/onkar/Documents/Projects/5G-Attacks/build && $(MAKE) -f liblte/CMakeFiles/lte.dir/build.make liblte/CMakeFiles/lte.dir/src/liblte_phy.cc.i
 .PHONY : src/liblte_phy.cc.i
 
 src/liblte_phy.s: src/liblte_phy.cc.s
@@ -359,7 +359,7 @@ src/liblte_phy.s: src/liblte_phy.cc.s
 
 # target to generate assembly for a file
 src/liblte_phy.cc.s:
-	cd /home/onkar/Documents/lib/openlte/build && $(MAKE) -f liblte/CMakeFiles/lte.dir/build.make liblte/CMakeFiles/lte.dir/src/liblte_phy.cc.s
+	cd /home/onkar/Documents/Projects/5G-Attacks/build && $(MAKE) -f liblte/CMakeFiles/lte.dir/build.make liblte/CMakeFiles/lte.dir/src/liblte_phy.cc.s
 .PHONY : src/liblte_phy.cc.s
 
 src/liblte_rlc.o: src/liblte_rlc.cc.o
@@ -368,7 +368,7 @@ src/liblte_rlc.o: src/liblte_rlc.cc.o
 
 # target to build an object file
 src/liblte_rlc.cc.o:
-	cd /home/onkar/Documents/lib/openlte/build && $(MAKE) -f liblte/CMakeFiles/lte.dir/build.make liblte/CMakeFiles/lte.dir/src/liblte_rlc.cc.o
+	cd /home/onkar/Documents/Projects/5G-Attacks/build && $(MAKE) -f liblte/CMakeFiles/lte.dir/build.make liblte/CMakeFiles/lte.dir/src/liblte_rlc.cc.o
 .PHONY : src/liblte_rlc.cc.o
 
 src/liblte_rlc.i: src/liblte_rlc.cc.i
@@ -377,7 +377,7 @@ src/liblte_rlc.i: src/liblte_rlc.cc.i
 
 # target to preprocess a source file
 src/liblte_rlc.cc.i:
-	cd /home/onkar/Documents/lib/openlte/build && $(MAKE) -f liblte/CMakeFiles/lte.dir/build.make liblte/CMakeFiles/lte.dir/src/liblte_rlc.cc.i
+	cd /home/onkar/Documents/Projects/5G-Attacks/build && $(MAKE) -f liblte/CMakeFiles/lte.dir/build.make liblte/CMakeFiles/lte.dir/src/liblte_rlc.cc.i
 .PHONY : src/liblte_rlc.cc.i
 
 src/liblte_rlc.s: src/liblte_rlc.cc.s
@@ -386,7 +386,7 @@ src/liblte_rlc.s: src/liblte_rlc.cc.s
 
 # target to generate assembly for a file
 src/liblte_rlc.cc.s:
-	cd /home/onkar/Documents/lib/openlte/build && $(MAKE) -f liblte/CMakeFiles/lte.dir/build.make liblte/CMakeFiles/lte.dir/src/liblte_rlc.cc.s
+	cd /home/onkar/Documents/Projects/5G-Attacks/build && $(MAKE) -f liblte/CMakeFiles/lte.dir/build.make liblte/CMakeFiles/lte.dir/src/liblte_rlc.cc.s
 .PHONY : src/liblte_rlc.cc.s
 
 src/liblte_rrc.o: src/liblte_rrc.cc.o
@@ -395,7 +395,7 @@ src/liblte_rrc.o: src/liblte_rrc.cc.o
 
 # target to build an object file
 src/liblte_rrc.cc.o:
-	cd /home/onkar/Documents/lib/openlte/build && $(MAKE) -f liblte/CMakeFiles/lte.dir/build.make liblte/CMakeFiles/lte.dir/src/liblte_rrc.cc.o
+	cd /home/onkar/Documents/Projects/5G-Attacks/build && $(MAKE) -f liblte/CMakeFiles/lte.dir/build.make liblte/CMakeFiles/lte.dir/src/liblte_rrc.cc.o
 .PHONY : src/liblte_rrc.cc.o
 
 src/liblte_rrc.i: src/liblte_rrc.cc.i
@@ -404,7 +404,7 @@ src/liblte_rrc.i: src/liblte_rrc.cc.i
 
 # target to preprocess a source file
 src/liblte_rrc.cc.i:
-	cd /home/onkar/Documents/lib/openlte/build && $(MAKE) -f liblte/CMakeFiles/lte.dir/build.make liblte/CMakeFiles/lte.dir/src/liblte_rrc.cc.i
+	cd /home/onkar/Documents/Projects/5G-Attacks/build && $(MAKE) -f liblte/CMakeFiles/lte.dir/build.make liblte/CMakeFiles/lte.dir/src/liblte_rrc.cc.i
 .PHONY : src/liblte_rrc.cc.i
 
 src/liblte_rrc.s: src/liblte_rrc.cc.s
@@ -413,7 +413,7 @@ src/liblte_rrc.s: src/liblte_rrc.cc.s
 
 # target to generate assembly for a file
 src/liblte_rrc.cc.s:
-	cd /home/onkar/Documents/lib/openlte/build && $(MAKE) -f liblte/CMakeFiles/lte.dir/build.make liblte/CMakeFiles/lte.dir/src/liblte_rrc.cc.s
+	cd /home/onkar/Documents/Projects/5G-Attacks/build && $(MAKE) -f liblte/CMakeFiles/lte.dir/build.make liblte/CMakeFiles/lte.dir/src/liblte_rrc.cc.s
 .PHONY : src/liblte_rrc.cc.s
 
 src/liblte_security.o: src/liblte_security.cc.o
@@ -422,7 +422,7 @@ src/liblte_security.o: src/liblte_security.cc.o
 
 # target to build an object file
 src/liblte_security.cc.o:
-	cd /home/onkar/Documents/lib/openlte/build && $(MAKE) -f liblte/CMakeFiles/lte.dir/build.make liblte/CMakeFiles/lte.dir/src/liblte_security.cc.o
+	cd /home/onkar/Documents/Projects/5G-Attacks/build && $(MAKE) -f liblte/CMakeFiles/lte.dir/build.make liblte/CMakeFiles/lte.dir/src/liblte_security.cc.o
 .PHONY : src/liblte_security.cc.o
 
 src/liblte_security.i: src/liblte_security.cc.i
@@ -431,7 +431,7 @@ src/liblte_security.i: src/liblte_security.cc.i
 
 # target to preprocess a source file
 src/liblte_security.cc.i:
-	cd /home/onkar/Documents/lib/openlte/build && $(MAKE) -f liblte/CMakeFiles/lte.dir/build.make liblte/CMakeFiles/lte.dir/src/liblte_security.cc.i
+	cd /home/onkar/Documents/Projects/5G-Attacks/build && $(MAKE) -f liblte/CMakeFiles/lte.dir/build.make liblte/CMakeFiles/lte.dir/src/liblte_security.cc.i
 .PHONY : src/liblte_security.cc.i
 
 src/liblte_security.s: src/liblte_security.cc.s
@@ -440,7 +440,7 @@ src/liblte_security.s: src/liblte_security.cc.s
 
 # target to generate assembly for a file
 src/liblte_security.cc.s:
-	cd /home/onkar/Documents/lib/openlte/build && $(MAKE) -f liblte/CMakeFiles/lte.dir/build.make liblte/CMakeFiles/lte.dir/src/liblte_security.cc.s
+	cd /home/onkar/Documents/Projects/5G-Attacks/build && $(MAKE) -f liblte/CMakeFiles/lte.dir/build.make liblte/CMakeFiles/lte.dir/src/liblte_security.cc.s
 .PHONY : src/liblte_security.cc.s
 
 tests/liblte_common_tests.o: tests/liblte_common_tests.cc.o
@@ -449,7 +449,7 @@ tests/liblte_common_tests.o: tests/liblte_common_tests.cc.o
 
 # target to build an object file
 tests/liblte_common_tests.cc.o:
-	cd /home/onkar/Documents/lib/openlte/build && $(MAKE) -f liblte/CMakeFiles/liblte_common_test.dir/build.make liblte/CMakeFiles/liblte_common_test.dir/tests/liblte_common_tests.cc.o
+	cd /home/onkar/Documents/Projects/5G-Attacks/build && $(MAKE) -f liblte/CMakeFiles/liblte_common_test.dir/build.make liblte/CMakeFiles/liblte_common_test.dir/tests/liblte_common_tests.cc.o
 .PHONY : tests/liblte_common_tests.cc.o
 
 tests/liblte_common_tests.i: tests/liblte_common_tests.cc.i
@@ -458,7 +458,7 @@ tests/liblte_common_tests.i: tests/liblte_common_tests.cc.i
 
 # target to preprocess a source file
 tests/liblte_common_tests.cc.i:
-	cd /home/onkar/Documents/lib/openlte/build && $(MAKE) -f liblte/CMakeFiles/liblte_common_test.dir/build.make liblte/CMakeFiles/liblte_common_test.dir/tests/liblte_common_tests.cc.i
+	cd /home/onkar/Documents/Projects/5G-Attacks/build && $(MAKE) -f liblte/CMakeFiles/liblte_common_test.dir/build.make liblte/CMakeFiles/liblte_common_test.dir/tests/liblte_common_tests.cc.i
 .PHONY : tests/liblte_common_tests.cc.i
 
 tests/liblte_common_tests.s: tests/liblte_common_tests.cc.s
@@ -467,7 +467,7 @@ tests/liblte_common_tests.s: tests/liblte_common_tests.cc.s
 
 # target to generate assembly for a file
 tests/liblte_common_tests.cc.s:
-	cd /home/onkar/Documents/lib/openlte/build && $(MAKE) -f liblte/CMakeFiles/liblte_common_test.dir/build.make liblte/CMakeFiles/liblte_common_test.dir/tests/liblte_common_tests.cc.s
+	cd /home/onkar/Documents/Projects/5G-Attacks/build && $(MAKE) -f liblte/CMakeFiles/liblte_common_test.dir/build.make liblte/CMakeFiles/liblte_common_test.dir/tests/liblte_common_tests.cc.s
 .PHONY : tests/liblte_common_tests.cc.s
 
 # Help Target
@@ -526,6 +526,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	cd /home/onkar/Documents/lib/openlte/build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /home/onkar/Documents/Projects/5G-Attacks/build && $(CMAKE_COMMAND) -H$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

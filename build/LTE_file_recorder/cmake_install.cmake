@@ -1,4 +1,4 @@
-# Install script for directory: /home/onkar/Documents/lib/openlte/LTE_file_recorder
+# Install script for directory: /home/onkar/Documents/Projects/5G-Attacks/LTE_file_recorder
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -44,7 +44,7 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
          FILE "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/bin/LTE_file_recorder"
          RPATH "")
   endif()
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/bin" TYPE EXECUTABLE FILES "/home/onkar/Documents/lib/openlte/build/LTE_file_recorder/LTE_file_recorder")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/bin" TYPE EXECUTABLE FILES "/home/onkar/Documents/Projects/5G-Attacks/build/LTE_file_recorder/LTE_file_recorder")
   if(EXISTS "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/bin/LTE_file_recorder" AND
      NOT IS_SYMLINK "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/bin/LTE_file_recorder")
     if(CMAKE_INSTALL_DO_STRIP)

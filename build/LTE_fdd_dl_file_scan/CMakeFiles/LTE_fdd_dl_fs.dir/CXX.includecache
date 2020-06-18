@@ -50,13 +50,13 @@ fftw3.h
 liblte_common.h
 ../liblte/hdr/liblte_common.h
 
-/home/onkar/Documents/lib/openlte/LTE_fdd_dl_file_scan/src/LTE_fdd_dl_fs_samp_buf.cc
+/home/onkar/Documents/Projects/5G-Attacks/LTE_fdd_dl_file_scan/src/LTE_fdd_dl_fs_samp_buf.cc
 LTE_fdd_dl_fs_samp_buf.h
-/home/onkar/Documents/lib/openlte/LTE_fdd_dl_file_scan/src/LTE_fdd_dl_fs_samp_buf.h
+/home/onkar/Documents/Projects/5G-Attacks/LTE_fdd_dl_file_scan/src/LTE_fdd_dl_fs_samp_buf.h
 liblte_mac.h
-/home/onkar/Documents/lib/openlte/LTE_fdd_dl_file_scan/src/liblte_mac.h
+/home/onkar/Documents/Projects/5G-Attacks/LTE_fdd_dl_file_scan/src/liblte_mac.h
 liblte_mcc_mnc_list.h
-/home/onkar/Documents/lib/openlte/LTE_fdd_dl_file_scan/src/liblte_mcc_mnc_list.h
+/home/onkar/Documents/Projects/5G-Attacks/LTE_fdd_dl_file_scan/src/liblte_mcc_mnc_list.h
 gnuradio/io_signature.h
 -
 

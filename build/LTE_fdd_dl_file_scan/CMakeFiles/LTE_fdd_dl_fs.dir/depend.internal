@@ -10,4 +10,4 @@ LTE_fdd_dl_file_scan/CMakeFiles/LTE_fdd_dl_fs.dir/src/LTE_fdd_dl_fs_samp_buf.cc.
  ../liblte/hdr/liblte_mcc_mnc_list.h
  ../liblte/hdr/liblte_phy.h
  ../liblte/hdr/liblte_rrc.h
- /home/onkar/Documents/lib/openlte/LTE_fdd_dl_file_scan/src/LTE_fdd_dl_fs_samp_buf.cc
+ /home/onkar/Documents/Projects/5G-Attacks/LTE_fdd_dl_file_scan/src/LTE_fdd_dl_fs_samp_buf.cc

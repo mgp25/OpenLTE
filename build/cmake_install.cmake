@@ -1,4 +1,4 @@
-# Install script for directory: /home/onkar/Documents/lib/openlte
+# Install script for directory: /home/onkar/Documents/Projects/5G-Attacks
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -39,13 +39,13 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
-  include("/home/onkar/Documents/lib/openlte/build/liblte/cmake_install.cmake")
-  include("/home/onkar/Documents/lib/openlte/build/libtools/cmake_install.cmake")
-  include("/home/onkar/Documents/lib/openlte/build/LTE_fdd_dl_file_gen/cmake_install.cmake")
-  include("/home/onkar/Documents/lib/openlte/build/LTE_fdd_dl_file_scan/cmake_install.cmake")
-  include("/home/onkar/Documents/lib/openlte/build/LTE_fdd_dl_scan/cmake_install.cmake")
-  include("/home/onkar/Documents/lib/openlte/build/LTE_file_recorder/cmake_install.cmake")
-  include("/home/onkar/Documents/lib/openlte/build/LTE_fdd_enodeb/cmake_install.cmake")
+  include("/home/onkar/Documents/Projects/5G-Attacks/build/liblte/cmake_install.cmake")
+  include("/home/onkar/Documents/Projects/5G-Attacks/build/libtools/cmake_install.cmake")
+  include("/home/onkar/Documents/Projects/5G-Attacks/build/LTE_fdd_dl_file_gen/cmake_install.cmake")
+  include("/home/onkar/Documents/Projects/5G-Attacks/build/LTE_fdd_dl_file_scan/cmake_install.cmake")
+  include("/home/onkar/Documents/Projects/5G-Attacks/build/LTE_fdd_dl_scan/cmake_install.cmake")
+  include("/home/onkar/Documents/Projects/5G-Attacks/build/LTE_file_recorder/cmake_install.cmake")
+  include("/home/onkar/Documents/Projects/5G-Attacks/build/LTE_fdd_enodeb/cmake_install.cmake")
 
 endif()
 
@@ -57,5 +57,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/home/onkar/Documents/lib/openlte/build/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/home/onkar/Documents/Projects/5G-Attacks/build/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

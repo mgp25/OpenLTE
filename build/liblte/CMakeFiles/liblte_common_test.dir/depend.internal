@@ -4,8 +4,8 @@
 liblte/CMakeFiles/liblte_common_test.dir/src/liblte_common.cc.o
  ../cmn_hdr/typedefs.h
  ../liblte/hdr/liblte_common.h
- /home/onkar/Documents/lib/openlte/liblte/src/liblte_common.cc
+ /home/onkar/Documents/Projects/5G-Attacks/liblte/src/liblte_common.cc
 liblte/CMakeFiles/liblte_common_test.dir/tests/liblte_common_tests.cc.o
  ../cmn_hdr/typedefs.h
  ../liblte/hdr/liblte_common.h
- /home/onkar/Documents/lib/openlte/liblte/tests/liblte_common_tests.cc
+ /home/onkar/Documents/Projects/5G-Attacks/liblte/tests/liblte_common_tests.cc

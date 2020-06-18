@@ -48,11 +48,11 @@ fftw3.h
 liblte_common.h
 ../liblte/hdr/liblte_common.h
 
-/home/onkar/Documents/lib/openlte/LTE_fdd_dl_file_gen/src/LTE_fdd_dl_fg_samp_buf.cc
+/home/onkar/Documents/Projects/5G-Attacks/LTE_fdd_dl_file_gen/src/LTE_fdd_dl_fg_samp_buf.cc
 LTE_fdd_dl_fg_samp_buf.h
-/home/onkar/Documents/lib/openlte/LTE_fdd_dl_file_gen/src/LTE_fdd_dl_fg_samp_buf.h
+/home/onkar/Documents/Projects/5G-Attacks/LTE_fdd_dl_file_gen/src/LTE_fdd_dl_fg_samp_buf.h
 liblte_mac.h
-/home/onkar/Documents/lib/openlte/LTE_fdd_dl_file_gen/src/liblte_mac.h
+/home/onkar/Documents/Projects/5G-Attacks/LTE_fdd_dl_file_gen/src/liblte_mac.h
 gnuradio/io_signature.h
 -
 errno.h
