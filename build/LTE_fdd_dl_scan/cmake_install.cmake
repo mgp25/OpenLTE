@@ -1,4 +1,4 @@
-# Install script for directory: /home/onkar/Documents/lib/openlte/LTE_fdd_dl_scan
+# Install script for directory: /home/onkar/Documents/Projects/5G-Attacks/LTE_fdd_dl_scan
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -44,7 +44,7 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
          FILE "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/bin/LTE_fdd_dl_scan"
          RPATH "")
   endif()
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/bin" TYPE EXECUTABLE FILES "/home/onkar/Documents/lib/openlte/build/LTE_fdd_dl_scan/LTE_fdd_dl_scan")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/bin" TYPE EXECUTABLE FILES "/home/onkar/Documents/Projects/5G-Attacks/build/LTE_fdd_dl_scan/LTE_fdd_dl_scan")
   if(EXISTS "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/bin/LTE_fdd_dl_scan" AND
      NOT IS_SYMLINK "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/bin/LTE_fdd_dl_scan")
     if(CMAKE_INSTALL_DO_STRIP)

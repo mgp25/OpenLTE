@@ -43,10 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/onkar/Documents/lib/openlte
+CMAKE_SOURCE_DIR = /home/onkar/Documents/Projects/5G-Attacks
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/onkar/Documents/lib/openlte/build
+CMAKE_BINARY_DIR = /home/onkar/Documents/Projects/5G-Attacks/build
 
 # Utility rule file for uninstall.
 
@@ -54,7 +54,7 @@ CMAKE_BINARY_DIR = /home/onkar/Documents/lib/openlte/build
 include CMakeFiles/uninstall.dir/progress.make
 
 CMakeFiles/uninstall:
-	/usr/bin/cmake -P /home/onkar/Documents/lib/openlte/build/cmake_uninstall.cmake
+	/usr/bin/cmake -P /home/onkar/Documents/Projects/5G-Attacks/build/cmake_uninstall.cmake
 
 uninstall: CMakeFiles/uninstall
 uninstall: CMakeFiles/uninstall.dir/build.make
@@ -71,6 +71,6 @@ CMakeFiles/uninstall.dir/clean:
 .PHONY : CMakeFiles/uninstall.dir/clean
 
 CMakeFiles/uninstall.dir/depend:
-	cd /home/onkar/Documents/lib/openlte/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/onkar/Documents/lib/openlte /home/onkar/Documents/lib/openlte /home/onkar/Documents/lib/openlte/build /home/onkar/Documents/lib/openlte/build /home/onkar/Documents/lib/openlte/build/CMakeFiles/uninstall.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/onkar/Documents/Projects/5G-Attacks/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/onkar/Documents/Projects/5G-Attacks /home/onkar/Documents/Projects/5G-Attacks /home/onkar/Documents/Projects/5G-Attacks/build /home/onkar/Documents/Projects/5G-Attacks/build /home/onkar/Documents/Projects/5G-Attacks/build/CMakeFiles/uninstall.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/uninstall.dir/depend
 

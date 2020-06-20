@@ -1,4 +1,4 @@
-# Install script for directory: /home/onkar/Documents/lib/openlte/LTE_fdd_enodeb
+# Install script for directory: /home/onkar/Documents/Projects/5G-Attacks/LTE_fdd_enodeb
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -44,7 +44,7 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
          FILE "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/bin/LTE_fdd_enodeb"
          RPATH "")
   endif()
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/bin" TYPE EXECUTABLE FILES "/home/onkar/Documents/lib/openlte/build/LTE_fdd_enodeb/LTE_fdd_enodeb")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/bin" TYPE EXECUTABLE FILES "/home/onkar/Documents/Projects/5G-Attacks/build/LTE_fdd_enodeb/LTE_fdd_enodeb")
   if(EXISTS "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/bin/LTE_fdd_enodeb" AND
      NOT IS_SYMLINK "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/bin/LTE_fdd_enodeb")
     if(CMAKE_INSTALL_DO_STRIP)
@@ -54,10 +54,10 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  execute_process(COMMAND chmod +x "/home/onkar/Documents/lib/openlte/enodeb_nat_script.sh")
+  execute_process(COMMAND chmod +x "/home/onkar/Documents/Projects/5G-Attacks/enodeb_nat_script.sh")
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  execute_process(COMMAND "/home/onkar/Documents/lib/openlte/enodeb_nat_script.sh")
+  execute_process(COMMAND "/home/onkar/Documents/Projects/5G-Attacks/enodeb_nat_script.sh")
 endif()
 

@@ -1,4 +1,4 @@
-# Install script for directory: /home/onkar/Documents/lib/openlte/libtools
+# Install script for directory: /home/onkar/Documents/Projects/5G-Attacks/libtools
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)

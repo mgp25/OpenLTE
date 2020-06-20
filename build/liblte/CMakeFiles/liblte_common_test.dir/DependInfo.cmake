@@ -4,8 +4,8 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/home/onkar/Documents/lib/openlte/liblte/src/liblte_common.cc" "/home/onkar/Documents/lib/openlte/build/liblte/CMakeFiles/liblte_common_test.dir/src/liblte_common.cc.o"
-  "/home/onkar/Documents/lib/openlte/liblte/tests/liblte_common_tests.cc" "/home/onkar/Documents/lib/openlte/build/liblte/CMakeFiles/liblte_common_test.dir/tests/liblte_common_tests.cc.o"
+  "/home/onkar/Documents/Projects/5G-Attacks/liblte/src/liblte_common.cc" "/home/onkar/Documents/Projects/5G-Attacks/build/liblte/CMakeFiles/liblte_common_test.dir/src/liblte_common.cc.o"
+  "/home/onkar/Documents/Projects/5G-Attacks/liblte/tests/liblte_common_tests.cc" "/home/onkar/Documents/Projects/5G-Attacks/build/liblte/CMakeFiles/liblte_common_test.dir/tests/liblte_common_tests.cc.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 

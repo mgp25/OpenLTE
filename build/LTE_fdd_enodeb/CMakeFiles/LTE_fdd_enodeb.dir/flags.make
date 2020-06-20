@@ -6,5 +6,5 @@ CXX_FLAGS =  -fPIC -g   -fvisibility=hidden
 
 CXX_DEFINES = 
 
-CXX_INCLUDES = -I/usr/include/osmosdr -I/home/onkar/Documents/lib/openlte/LTE_fdd_enodeb/hdr -I/home/onkar/Documents/lib/openlte/liblte/hdr -I/home/onkar/Documents/lib/openlte/libtools/hdr -I/home/onkar/Documents/lib/openlte/cmn_hdr 
+CXX_INCLUDES = -I/usr/include/osmosdr -I/home/onkar/Documents/Projects/5G-Attacks/LTE_fdd_enodeb/hdr -I/home/onkar/Documents/Projects/5G-Attacks/liblte/hdr -I/home/onkar/Documents/Projects/5G-Attacks/libtools/hdr -I/home/onkar/Documents/Projects/5G-Attacks/cmn_hdr 
 
