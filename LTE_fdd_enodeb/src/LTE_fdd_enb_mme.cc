@@ -261,6 +261,7 @@ void LTE_fdd_enb_mme::handle_nas_msg(LTE_FDD_ENB_MME_NAS_MSG_READY_MSG_STRUCT *n
                                       __FILE__,
                                       __LINE__,
                                       "Not handling Tracking Area Update Request");
+            send_authentication_reject(nas_msg->user, nas_msg->rb);
             break;
         case LIBLTE_MME_MSG_TYPE_UPLINK_NAS_TRANSPORT:
             interface->send_debug_msg(LTE_FDD_ENB_DEBUG_TYPE_ERROR,
