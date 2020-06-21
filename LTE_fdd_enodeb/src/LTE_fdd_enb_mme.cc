@@ -261,6 +261,7 @@ void LTE_fdd_enb_mme::handle_nas_msg(LTE_FDD_ENB_MME_NAS_MSG_READY_MSG_STRUCT *n
                                       __FILE__,
                                       __LINE__,
                                       "Not handling Tracking Area Update Request");
+            send_detach_request(nas_msg->user, nas_msg->rb,LIBLTE_MME_TOD_DL_REATTACH_REQUIRED);
             break;
         case LIBLTE_MME_MSG_TYPE_UPLINK_NAS_TRANSPORT:
             interface->send_debug_msg(LTE_FDD_ENB_DEBUG_TYPE_ERROR,
@@ -1197,7 +1198,7 @@ void LTE_fdd_enb_mme::attach_sm(LTE_fdd_enb_user *user,
                                   LTE_fdd_enb_rb_text[rb->get_rb_id()]);
 
     //send_authentication_reject(user, rb);
-    send_detach_request(user,rb);
+    send_detach_request(user,rb,LIBLTE_MME_TOD_DL_REATTACH_REQUIRED);
     // switch(rb->get_mme_state())
     // {
     // case LTE_FDD_ENB_MME_STATE_ID_REQUEST_IMSI:
@@ -1529,18 +1530,18 @@ void LTE_fdd_enb_mme::send_authentication_request(LTE_fdd_enb_user *user,
 }
 
 
-void LTE_fdd_enb_mme::send_detach_request( LTE_fdd_enb_user  *user, LTE_fdd_enb_rb  *rb)
+void LTE_fdd_enb_mme::send_detach_request( LTE_fdd_enb_user  *user, LTE_fdd_enb_rb  *rb, uint8   cause)
 {
     LTE_FDD_ENB_RRC_NAS_MSG_READY_MSG_STRUCT nas_msg_ready;
     LIBLTE_MME_DETACH_REQUEST_MSG_STRUCT  detach_request;
     LIBLTE_BYTE_MSG_STRUCT                        msg;
 
-    detach_request.detach_type.type_of_detach = LIBLTE_MME_TOD_DL_REATTACH_REQUIRED;
+    detach_request.detach_type.type_of_detach = cause;
 
-    liblte_mme_pack_network_detach_request_msg(&detach_request,
+    liblte_mme_pack_detach_request_msg(&detach_request,
                                           LIBLTE_MME_SECURITY_HDR_TYPE_PLAIN_NAS,
-                                          NULL,
-                                          0,
+                                          (user)->get_auth_vec()->k_nas_int,
+                                          (user)->get_auth_vec()->nas_count_dl,
                                           LIBLTE_SECURITY_DIRECTION_DOWNLINK,
                                           &msg);
 
