@@ -261,7 +261,7 @@ void LTE_fdd_enb_mme::handle_nas_msg(LTE_FDD_ENB_MME_NAS_MSG_READY_MSG_STRUCT *n
                                       __FILE__,
                                       __LINE__,
                                       "Not handling Tracking Area Update Request");
-            send_detach_request(nas_msg->user, nas_msg->rb,LIBLTE_MME_TOD_DL_REATTACH_REQUIRED);
+            send_detach_request(nas_msg->user, nas_msg->rb,LIBLTE_MME_TOD_DL_REATTACH_NOT_REQUIRED);
             break;
         case LIBLTE_MME_MSG_TYPE_UPLINK_NAS_TRANSPORT:
             interface->send_debug_msg(LTE_FDD_ENB_DEBUG_TYPE_ERROR,
@@ -1198,7 +1198,7 @@ void LTE_fdd_enb_mme::attach_sm(LTE_fdd_enb_user *user,
                                   LTE_fdd_enb_rb_text[rb->get_rb_id()]);
 
     //send_authentication_reject(user, rb);
-    send_detach_request(user,rb,LIBLTE_MME_TOD_DL_REATTACH_REQUIRED);
+    send_detach_request(user,rb,LIBLTE_MME_TOD_DL_REATTACH_NOT_REQUIRED);
     // switch(rb->get_mme_state())
     // {
     // case LTE_FDD_ENB_MME_STATE_ID_REQUEST_IMSI:
