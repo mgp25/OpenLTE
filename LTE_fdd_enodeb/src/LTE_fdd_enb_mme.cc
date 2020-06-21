@@ -259,6 +259,9 @@ void LTE_fdd_enb_mme::handle_nas_msg(LTE_FDD_ENB_MME_NAS_MSG_READY_MSG_STRUCT *n
                                       __FILE__,
                                       __LINE__,
                                       "Not handling Tracking Area Update Request");
+            //send_tracking_area_update_reject(nas_msg->user, nas_msg->rb,LIBLTE_MME_EMM_CAUSE_EPS_SERVICES_NOT_ALLOWED);
+            send_tracking_area_update_reject(nas_msg->user, nas_msg->rb,LIBLTE_MME_EMM_CAUSE_EPS_SERVICES_AND_NON_EPS_SERVICES_NOT_ALLOWED);
+            
             break;
         case LIBLTE_MME_MSG_TYPE_UPLINK_NAS_TRANSPORT:
             interface->send_debug_msg(LTE_FDD_ENB_DEBUG_TYPE_ERROR,
@@ -1469,6 +1472,43 @@ void LTE_fdd_enb_mme::send_authentication_reject(LTE_fdd_enb_user *user,
 
     send_rrc_command(user, rb, LTE_FDD_ENB_RRC_CMD_RELEASE);
 }
+
+void LTE_fdd_enb_mme::send_tracking_area_update_reject(LTE_fdd_enb_user *user,
+                                          LTE_fdd_enb_rb   *rb,
+                                          uint8             cause)
+{
+    LTE_FDD_ENB_RRC_NAS_MSG_READY_MSG_STRUCT nas_msg_ready;
+    LIBLTE_MME_TRACKING_AREA_UPDATE_REJECT_MSG_STRUCT     tau_rej;
+    LIBLTE_BYTE_MSG_STRUCT                   msg;
+
+    tau_rej.emm_cause     = cause;
+    tau_rej.t3446_present = false;
+    liblte_mme_pack_tracking_area_update_reject_msg(&tau_rej,
+                                       LIBLTE_MME_SECURITY_HDR_TYPE_PLAIN_NAS,
+                                       (user)->get_auth_vec()->k_nas_int,
+                                       (user)->get_auth_vec()->nas_count_dl,
+                                       LIBLTE_SECURITY_DIRECTION_DOWNLINK,
+                                       &msg);
+    interface->send_debug_msg(LTE_FDD_ENB_DEBUG_TYPE_INFO,
+                              LTE_FDD_ENB_DEBUG_LEVEL_MME,
+                              __FILE__,
+                              __LINE__,
+                              &msg,
+                              "Sending Tracking Area Update Reject for RNTI=%u, RB=%s",
+                              user->get_c_rnti(),
+                              LTE_fdd_enb_rb_text[rb->get_rb_id()]);
+
+    // Queue the NAS message for RRC
+    rb->queue_rrc_nas_msg(&msg);
+
+    nas_msg_ready.user = user;
+    nas_msg_ready.rb   = rb;
+    msgq_to_rrc->send(LTE_FDD_ENB_MESSAGE_TYPE_RRC_NAS_MSG_READY,
+                      LTE_FDD_ENB_DEST_LAYER_RRC,
+                      (LTE_FDD_ENB_MESSAGE_UNION *)&nas_msg_ready,
+                      sizeof(LTE_FDD_ENB_RRC_NAS_MSG_READY_MSG_STRUCT));
+}
+
 void LTE_fdd_enb_mme::send_authentication_request(LTE_fdd_enb_user *user,
                                                   LTE_fdd_enb_rb   *rb)
 {
