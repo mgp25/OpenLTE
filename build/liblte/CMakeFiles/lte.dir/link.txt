@@ -1,0 +1,2 @@
+/usr/bin/ar qc liblte.a  CMakeFiles/lte.dir/src/liblte_common.cc.o CMakeFiles/lte.dir/src/liblte_interface.cc.o CMakeFiles/lte.dir/src/liblte_phy.cc.o CMakeFiles/lte.dir/src/liblte_mac.cc.o CMakeFiles/lte.dir/src/liblte_rlc.cc.o CMakeFiles/lte.dir/src/liblte_pdcp.cc.o CMakeFiles/lte.dir/src/liblte_rrc.cc.o CMakeFiles/lte.dir/src/liblte_mme.cc.o CMakeFiles/lte.dir/src/liblte_security.cc.o
+/usr/bin/ranlib liblte.a
