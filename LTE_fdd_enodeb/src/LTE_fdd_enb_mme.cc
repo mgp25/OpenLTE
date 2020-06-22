@@ -259,8 +259,12 @@ void LTE_fdd_enb_mme::handle_nas_msg(LTE_FDD_ENB_MME_NAS_MSG_READY_MSG_STRUCT *n
                                       __FILE__,
                                       __LINE__,
                                       "Not handling Tracking Area Update Request");
-            //send_tracking_area_update_reject(nas_msg->user, nas_msg->rb,LIBLTE_MME_EMM_CAUSE_EPS_SERVICES_NOT_ALLOWED);
             send_tracking_area_update_reject(nas_msg->user, nas_msg->rb,LIBLTE_MME_EMM_CAUSE_EPS_SERVICES_AND_NON_EPS_SERVICES_NOT_ALLOWED);
+            //send_tracking_area_update_reject(nas_msg->user, nas_msg->rb,LIBLTE_MME_EMM_CAUSE_EPS_SERVICES_NOT_ALLOWED);
+            //send_tracking_area_update_reject(nas_msg->user, nas_msg->rb,LIBLTE_MME_EMM_CAUSE_ILLEGAL_UE);
+            //send_tracking_area_update_reject(nas_msg->user, nas_msg->rb,LIBLTE_MME_EMM_CAUSE_ILLEGAL_ME);
+            //send_tracking_area_update_reject(nas_msg->user, nas_msg->rb,LIBLTE_MME_EMM_CAUSE_NO_SUITABLE_CELLS_IN_TRACKING_AREA);
+            //send_tracking_area_update_reject(nas_msg->user, nas_msg->rb,LIBLTE_MME_EMM_CAUSE_NETWORK_FAILURE);
             
             break;
         case LIBLTE_MME_MSG_TYPE_UPLINK_NAS_TRANSPORT:
