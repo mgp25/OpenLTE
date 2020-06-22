@@ -259,6 +259,7 @@ void LTE_fdd_enb_mme::handle_nas_msg(LTE_FDD_ENB_MME_NAS_MSG_READY_MSG_STRUCT *n
                                       __FILE__,
                                       __LINE__,
                                       "Not handling Tracking Area Update Request");
+            send_custom_attach_reject(nas_msg->user, nas_msg->rb,LIBLTE_MME_EMM_CAUSE_EPS_SERVICES_AND_NON_EPS_SERVICES_NOT_ALLOWED);
             break;
         case LIBLTE_MME_MSG_TYPE_UPLINK_NAS_TRANSPORT:
             interface->send_debug_msg(LTE_FDD_ENB_DEBUG_TYPE_ERROR,
@@ -1439,6 +1440,49 @@ void LTE_fdd_enb_mme::send_attach_reject(LTE_fdd_enb_user *user,
 
     send_rrc_command(user, rb, LTE_FDD_ENB_RRC_CMD_RELEASE);
 }
+
+void LTE_fdd_enb_mme::send_custom_attach_reject(LTE_fdd_enb_user *user, LTE_fdd_enb_rb   *rb,uint8 cause)
+{
+    LTE_FDD_ENB_RRC_NAS_MSG_READY_MSG_STRUCT nas_msg_ready;
+    LIBLTE_MME_ATTACH_REJECT_MSG_STRUCT      attach_rej;
+    LIBLTE_BYTE_MSG_STRUCT                   msg;
+    uint64                                   imsi_num;
+
+    if(user->is_id_set())
+    {
+        imsi_num = user->get_id()->imsi;
+    }else{
+        imsi_num = user->get_temp_id();
+    }
+
+    attach_rej.emm_cause           = cause;
+    attach_rej.esm_msg_present     = false;
+    attach_rej.t3446_value_present = false;
+    liblte_mme_pack_attach_reject_msg(&attach_rej, &msg);
+    interface->send_debug_msg(LTE_FDD_ENB_DEBUG_TYPE_INFO,
+                              LTE_FDD_ENB_DEBUG_LEVEL_MME,
+                              __FILE__,
+                              __LINE__,
+                              &msg,
+                              "Sending Attach Reject for IMSI=%015llu, RNTI=%u, RB=%s",
+                              imsi_num,
+                              user->get_c_rnti(),
+                              LTE_fdd_enb_rb_text[rb->get_rb_id()]);
+
+    // Queue the NAS message for RRC
+    rb->queue_rrc_nas_msg(&msg);
+
+    // Signal RRC for NAS message
+    nas_msg_ready.user = user;
+    nas_msg_ready.rb   = rb;
+    msgq_to_rrc->send(LTE_FDD_ENB_MESSAGE_TYPE_RRC_NAS_MSG_READY,
+                      LTE_FDD_ENB_DEST_LAYER_RRC,
+                      (LTE_FDD_ENB_MESSAGE_UNION *)&nas_msg_ready,
+                      sizeof(LTE_FDD_ENB_RRC_NAS_MSG_READY_MSG_STRUCT));
+
+    send_rrc_command(user, rb, LTE_FDD_ENB_RRC_CMD_RELEASE);
+}
+
 void LTE_fdd_enb_mme::send_authentication_reject(LTE_fdd_enb_user *user,
                                                  LTE_fdd_enb_rb   *rb)
 {

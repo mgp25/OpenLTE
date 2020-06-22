@@ -1,0 +1,10 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/onkar/Documents/Projects/5G-Attacks/build/LTE_fdd_dl_file_scan/_LTE_fdd_dl_fs_swig_tag.cpp
+
