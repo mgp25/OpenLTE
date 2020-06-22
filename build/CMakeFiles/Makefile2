@@ -385,9 +385,9 @@ clean: LTE_fdd_dl_file_gen/CMakeFiles/LTE_fdd_dl_fg_LTE_fdd_dl_file_gen_e8b9f.di
 # Target rules for target LTE_fdd_dl_file_gen/CMakeFiles/_LTE_fdd_dl_fg.dir
 
 # All Build rule for target.
+LTE_fdd_dl_file_gen/CMakeFiles/_LTE_fdd_dl_fg.dir/all: LTE_fdd_dl_file_gen/CMakeFiles/LTE_fdd_dl_fg_LTE_fdd_dl_file_gen_e8b9f.dir/all
 LTE_fdd_dl_file_gen/CMakeFiles/_LTE_fdd_dl_fg.dir/all: liblte/CMakeFiles/lte.dir/all
 LTE_fdd_dl_file_gen/CMakeFiles/_LTE_fdd_dl_fg.dir/all: LTE_fdd_dl_file_gen/CMakeFiles/LTE_fdd_dl_fg.dir/all
-LTE_fdd_dl_file_gen/CMakeFiles/_LTE_fdd_dl_fg.dir/all: LTE_fdd_dl_file_gen/CMakeFiles/LTE_fdd_dl_fg_LTE_fdd_dl_file_gen_e8b9f.dir/all
 	$(MAKE) -f LTE_fdd_dl_file_gen/CMakeFiles/_LTE_fdd_dl_fg.dir/build.make LTE_fdd_dl_file_gen/CMakeFiles/_LTE_fdd_dl_fg.dir/depend
 	$(MAKE) -f LTE_fdd_dl_file_gen/CMakeFiles/_LTE_fdd_dl_fg.dir/build.make LTE_fdd_dl_file_gen/CMakeFiles/_LTE_fdd_dl_fg.dir/build
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/onkar/Documents/Projects/5G-Attacks/build/CMakeFiles --progress-num=39,40,41,42 "Built target _LTE_fdd_dl_fg"
@@ -676,9 +676,9 @@ clean: LTE_fdd_dl_file_scan/CMakeFiles/LTE_fdd_dl_fs_LTE_fdd_dl_file_scan_ab40d.
 # Target rules for target LTE_fdd_dl_file_scan/CMakeFiles/_LTE_fdd_dl_fs.dir
 
 # All Build rule for target.
-LTE_fdd_dl_file_scan/CMakeFiles/_LTE_fdd_dl_fs.dir/all: liblte/CMakeFiles/lte.dir/all
 LTE_fdd_dl_file_scan/CMakeFiles/_LTE_fdd_dl_fs.dir/all: LTE_fdd_dl_file_scan/CMakeFiles/LTE_fdd_dl_fs.dir/all
 LTE_fdd_dl_file_scan/CMakeFiles/_LTE_fdd_dl_fs.dir/all: LTE_fdd_dl_file_scan/CMakeFiles/LTE_fdd_dl_fs_LTE_fdd_dl_file_scan_ab40d.dir/all
+LTE_fdd_dl_file_scan/CMakeFiles/_LTE_fdd_dl_fs.dir/all: liblte/CMakeFiles/lte.dir/all
 	$(MAKE) -f LTE_fdd_dl_file_scan/CMakeFiles/_LTE_fdd_dl_fs.dir/build.make LTE_fdd_dl_file_scan/CMakeFiles/_LTE_fdd_dl_fs.dir/depend
 	$(MAKE) -f LTE_fdd_dl_file_scan/CMakeFiles/_LTE_fdd_dl_fs.dir/build.make LTE_fdd_dl_file_scan/CMakeFiles/_LTE_fdd_dl_fs.dir/build
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/onkar/Documents/Projects/5G-Attacks/build/CMakeFiles --progress-num=45,46,47,48 "Built target _LTE_fdd_dl_fs"
