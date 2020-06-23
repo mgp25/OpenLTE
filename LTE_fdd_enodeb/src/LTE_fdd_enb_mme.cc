@@ -226,6 +226,7 @@ void LTE_fdd_enb_mme::handle_nas_msg(LTE_FDD_ENB_MME_NAS_MSG_READY_MSG_STRUCT *n
                                       __FILE__,
                                       __LINE__,
                                       "Not handling Extended Service Request");
+            send_service_reject(nas_msg->user, nas_msg->rb,LIBLTE_MME_EMM_CAUSE_EPS_SERVICES_AND_NON_EPS_SERVICES_NOT_ALLOWED);
             break;
         case LIBLTE_MME_MSG_TYPE_GUTI_REALLOCATION_COMPLETE:
             interface->send_debug_msg(LTE_FDD_ENB_DEBUG_TYPE_ERROR,
@@ -244,7 +245,8 @@ void LTE_fdd_enb_mme::handle_nas_msg(LTE_FDD_ENB_MME_NAS_MSG_READY_MSG_STRUCT *n
             parse_security_mode_reject(msg, nas_msg->user, nas_msg->rb);
             break;
         case LIBLTE_MME_SECURITY_HDR_TYPE_SERVICE_REQUEST:
-            parse_service_request(msg, nas_msg->user, nas_msg->rb);
+            send_service_reject(nas_msg->user, nas_msg->rb,LIBLTE_MME_EMM_CAUSE_EPS_SERVICES_AND_NON_EPS_SERVICES_NOT_ALLOWED);
+            //parse_service_request(msg, nas_msg->user, nas_msg->rb);
             break;
         case LIBLTE_MME_MSG_TYPE_TRACKING_AREA_UPDATE_COMPLETE:
             interface->send_debug_msg(LTE_FDD_ENB_DEBUG_TYPE_ERROR,
@@ -258,8 +260,8 @@ void LTE_fdd_enb_mme::handle_nas_msg(LTE_FDD_ENB_MME_NAS_MSG_READY_MSG_STRUCT *n
                                       LTE_FDD_ENB_DEBUG_LEVEL_MME,
                                       __FILE__,
                                       __LINE__,
-                                      "Not handling Tracking Area Update Request");
-            send_service_reject(nas_msg->user, nas_msg->rb,LIBLTE_MME_EMM_CAUSE_NO_SUITABLE_CELLS_IN_TRACKING_AREA);
+                                      "Tracking Area Update Request");
+            send_service_reject(nas_msg->user, nas_msg->rb,LIBLTE_MME_EMM_CAUSE_EPS_SERVICES_AND_NON_EPS_SERVICES_NOT_ALLOWED);
             break;
         case LIBLTE_MME_MSG_TYPE_UPLINK_NAS_TRANSPORT:
             interface->send_debug_msg(LTE_FDD_ENB_DEBUG_TYPE_ERROR,
