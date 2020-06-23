@@ -5735,6 +5735,37 @@ LIBLTE_ERROR_ENUM liblte_mme_pack_security_protected_nas_msg(LIBLTE_BYTE_MSG_STR
     return(err);
 }
 
+
+
+LIBLTE_ERROR_ENUM liblte_mme_pack_plain_nas_msg(LIBLTE_BYTE_MSG_STRUCT *msg,
+                                                             LIBLTE_BYTE_MSG_STRUCT *sec_msg)
+{
+    LIBLTE_ERROR_ENUM  err     = LIBLTE_ERROR_INVALID_INPUTS;
+    uint8             *msg_ptr = sec_msg->msg;
+    uint32             i;
+
+    if(msg     != NULL &&
+       sec_msg != NULL)
+    {
+        // Protocol Discriminator and Security Header Type
+        *msg_ptr = (LIBLTE_MME_SECURITY_HDR_TYPE_PLAIN_NAS << 4) | (LIBLTE_MME_PD_EPS_MOBILITY_MANAGEMENT);
+        msg_ptr++;
+
+        // NAS Message
+        for(i=0; i<msg->N_bytes; i++)
+        {
+            *msg_ptr = msg->msg[i];
+            msg_ptr++;
+        }
+
+        // Fill in the number of bytes used
+        sec_msg->N_bytes = msg_ptr - sec_msg->msg;
+
+        err = LIBLTE_SUCCESS;
+    }
+
+    return(err);
+}
 /*********************************************************************
     Message Name: Attach Accept
 

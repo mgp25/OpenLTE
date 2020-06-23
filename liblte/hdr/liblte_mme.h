@@ -2681,6 +2681,9 @@ LIBLTE_ERROR_ENUM liblte_mme_pack_security_protected_nas_msg(LIBLTE_BYTE_MSG_STR
                                                              uint32                  count,
                                                              uint8                   direction,
                                                              LIBLTE_BYTE_MSG_STRUCT *sec_msg);
+LIBLTE_ERROR_ENUM liblte_mme_pack_plain_nas_msg(LIBLTE_BYTE_MSG_STRUCT *msg,
+                                                             LIBLTE_BYTE_MSG_STRUCT *sec_msg);
+
 
 /*********************************************************************
     Message Name: Attach Accept

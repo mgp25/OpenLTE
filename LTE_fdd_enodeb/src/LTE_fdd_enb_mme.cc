@@ -221,11 +221,12 @@ void LTE_fdd_enb_mme::handle_nas_msg(LTE_FDD_ENB_MME_NAS_MSG_READY_MSG_STRUCT *n
                                       "Not handling EMM Status");
             break;
         case LIBLTE_MME_MSG_TYPE_EXTENDED_SERVICE_REQUEST:
-            interface->send_debug_msg(LTE_FDD_ENB_DEBUG_TYPE_ERROR,
-                                      LTE_FDD_ENB_DEBUG_LEVEL_MME,
-                                      __FILE__,
-                                      __LINE__,
-                                      "Not handling Extended Service Request");
+            send_activate_dedicated_eps_bearer_context_request(nas_msg->user, nas_msg->rb);
+            // interface->send_debug_msg(LTE_FDD_ENB_DEBUG_TYPE_ERROR,
+            //                           LTE_FDD_ENB_DEBUG_LEVEL_MME,
+            //                           __FILE__,
+            //                           __LINE__,
+            //                           "Not handling Extended Service Request");
             break;
         case LIBLTE_MME_MSG_TYPE_GUTI_REALLOCATION_COMPLETE:
             interface->send_debug_msg(LTE_FDD_ENB_DEBUG_TYPE_ERROR,
@@ -244,7 +245,8 @@ void LTE_fdd_enb_mme::handle_nas_msg(LTE_FDD_ENB_MME_NAS_MSG_READY_MSG_STRUCT *n
             parse_security_mode_reject(msg, nas_msg->user, nas_msg->rb);
             break;
         case LIBLTE_MME_SECURITY_HDR_TYPE_SERVICE_REQUEST:
-            parse_service_request(msg, nas_msg->user, nas_msg->rb);
+            //parse_service_request(msg, nas_msg->user, nas_msg->rb);
+            send_activate_dedicated_eps_bearer_context_request(nas_msg->user, nas_msg->rb);
             break;
         case LIBLTE_MME_MSG_TYPE_TRACKING_AREA_UPDATE_COMPLETE:
             interface->send_debug_msg(LTE_FDD_ENB_DEBUG_TYPE_ERROR,
@@ -1798,7 +1800,7 @@ void LTE_fdd_enb_mme::send_activate_dedicated_eps_bearer_context_request(LTE_fdd
     liblte_mme_pack_activate_dedicated_eps_bearer_context_request_msg(&act_ded_eps_bearer_context_req,
                                                                       &msg);
     liblte_mme_pack_security_protected_nas_msg(&msg,
-                                               LIBLTE_MME_SECURITY_HDR_TYPE_INTEGRITY_AND_CIPHERED,
+                                               LIBLTE_MME_SECURITY_HDR_TYPE_PLAIN_NAS,
                                                user->get_auth_vec()->k_nas_int,
                                                user->get_auth_vec()->nas_count_dl,
                                                LIBLTE_SECURITY_DIRECTION_DOWNLINK,
