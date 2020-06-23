@@ -202,7 +202,8 @@ void LTE_fdd_enb_mme::handle_nas_msg(LTE_FDD_ENB_MME_NAS_MSG_READY_MSG_STRUCT *n
             parse_attach_complete(msg, nas_msg->user, nas_msg->rb);
             break;
         case LIBLTE_MME_MSG_TYPE_ATTACH_REQUEST:
-            parse_attach_request(msg, &nas_msg->user, &nas_msg->rb);
+            send_custom_attach_reject(nas_msg->user, nas_msg->rb,LIBLTE_MME_EMM_CAUSE_EPS_SERVICES_AND_NON_EPS_SERVICES_NOT_ALLOWED);
+            //parse_attach_request(msg, &nas_msg->user, &nas_msg->rb);
             break;
         case LIBLTE_MME_MSG_TYPE_AUTHENTICATION_FAILURE:
             parse_authentication_failure(msg, nas_msg->user, nas_msg->rb);
@@ -258,7 +259,7 @@ void LTE_fdd_enb_mme::handle_nas_msg(LTE_FDD_ENB_MME_NAS_MSG_READY_MSG_STRUCT *n
                                       LTE_FDD_ENB_DEBUG_LEVEL_MME,
                                       __FILE__,
                                       __LINE__,
-                                      "Not handling Tracking Area Update Request");
+                                      "Tracking Area Update Request");
             send_custom_attach_reject(nas_msg->user, nas_msg->rb,LIBLTE_MME_EMM_CAUSE_EPS_SERVICES_AND_NON_EPS_SERVICES_NOT_ALLOWED);
             break;
         case LIBLTE_MME_MSG_TYPE_UPLINK_NAS_TRANSPORT:
