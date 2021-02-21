@@ -23,6 +23,18 @@ This is a clone of [https://sourceforge.net/p/openlte](https://sourceforge.net/p
 	- [Adding subscribers](#adding-subscribers)
 * [Test captures](#test-captures)
 
+### Attack implementations
+
+Some attacks implemented by [@onkarmumbrekar](https://github.com/onkarmumbrekar) can be found in the different branches:
+
+- akabypass
+- attach_reject
+- dos_tau_reject_dualcase
+- dos_tau_reject
+- malformed_detach
+- numb_attack
+- service_reject_on_tau
+- tau_numb_attack
 
 ## Prerequisites
 
